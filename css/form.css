@@ -1,0 +1,256 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+body{
+    font-size: 16px;
+    font-family: "Noto Sans KR","맑은 고딕",sans-serif;
+    color: #333333;
+    line-height: 1.5;
+}
+#main{
+    width: 1280px;
+}
+
+/* #m-search-wrap .m-sch-top */
+#m-search-wrap{
+    margin-top: 150px;
+}
+#m-search-wrap h1{
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+#m-search-wrap .course a{
+    text-decoration: none;
+    color: #444444;
+    line-height: 40px;
+    font-size: 1.3em;
+}
+#m-search-wrap .course a:hover{
+    text-decoration:underline;
+}
+#m-search-wrap .blue a{
+    color: #0e0e5d;
+    margin-right: 10px;
+}
+#m-search-wrap .after a::after{
+    content: ' 〉';
+}
+#m-search-wrap .course .m-top-btn a{
+    text-decoration: none;
+    color: #727272;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 100%;
+    margin-left: 5px;
+    border: 1px solid #727272;
+}
+#m-search-wrap .course .m-top-btn a:hover{
+    text-decoration:underline;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* #m-search-wrap .m-sch-search */
+#m-search-wrap .m-sch-search h6{
+    color: #333333;
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+#m-search-wrap .bold{
+    font-weight: 700;
+}
+#m-search-wrap .m-sch-search select{
+    border: 1px solid #dddddd;
+    width: 100px;
+    height: 40px;
+    font-size: 0.9em;
+    color: #727272;
+}
+#m-search-wrap .m-sch-search select:hover{
+    border:1px solid #000000;
+}
+#m-search-wrap .m-sch-search input{
+    border: 1px solid #dddddd;
+    width: 220px;
+    height: 40px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #727272;
+    padding-left: 5px;
+}
+#m-search-wrap .m-sch-search input:active{
+    border: 3px solid #000000;
+    border-radius: 3px;
+}
+#m-search-wrap .m-sch-search button{
+    font-weight: bold;
+    font-size: 0.9em;
+    width: 60px;
+    height: 40px;
+    color: #ffffff;
+    background-color: #000000;
+    margin-left: -4px;
+    position: relative;
+    top: 1px;
+}
+#m-search-wrap .m-sch-search button:hover{
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+/* #m-board-wrap .m-brd-top*/
+/* 게시글 분류 */
+#m-board-wrap .m-brd-top {
+    border-top:2px solid #0e0e5d;
+    border-bottom:1px solid #333333;
+    height: 60px;
+}
+#m-board-wrap .m-brd-top span{
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #222222;
+}
+#m-board-wrap .title{
+    width: 460px;
+}
+#m-board-wrap .w60{
+    width: 60px;
+}
+#m-board-wrap .w80{
+    width: 80px;
+}
+#m-board-wrap .w100{
+    width: 100px;
+}
+#m-board-wrap .w120{
+    width: 120px;
+}
+/* 게시글 제목 */
+#m-board-wrap .m-brd-content{
+    border-top:1px solid #dddddd;
+    background-color: #ffffff;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #666666;
+}
+#m-board-wrap .border-top{
+    border: 0;
+}
+#m-board-wrap .m-brd-content .title{
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #333333;
+}
+#m-board-wrap .m-brd-content label{
+    cursor: pointer;
+}
+#m-board-wrap .m-brd-content label:hover,
+#m-board-wrap .m-brd-content label:active{
+    text-decoration: underline;
+}
+#m-board-wrap>.m-brd-content>input{
+    display: none;
+}
+/* 게시글 내용 */
+#m-board-wrap .content-wrap{
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    height: 0;
+    transition: all .6s;
+}
+#m-board-wrap .content-wrap .content{
+    color: #222222;
+    background: #f3f3f3;
+    border: none;
+    line-height: 1.8em;
+    padding: 2% 13%;
+}
+#m-board-wrap input:checked ~ div.content-wrap{
+    height: auto;
+}
+
+/* 페이지네이션 */
+#pager-wrap .border{
+    border-top: 1px solid #333333;
+    width: 100%;
+}
+#pager-wrap .border div{
+    font-size: 0.9em;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 100%;
+    margin: 30px 3px;
+    cursor: pointer;
+    position: relative;
+    left: 160px;
+}
+#pager-wrap .border div:hover,
+#pager-wrap .border div:active{
+    text-decoration: underline;
+    color: #ffffff;
+    background-color: #333333;
+    font-weight: bold;
+}
+#pager-wrap .border .p-btn{
+    color: #999999;
+    border: 1px solid #999999;
+}
+#pager-wrap .border .p-btn:hover{
+    color: #999999;
+    background-color: #ffffff;
+}
+
+/* all */
+.inner{
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    background: rgba(255,255,255,0);
+    overflow: hidden;
+}
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin-left: 360px;
+    height: inherit;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.cf{
+    display: block;
+    clear: both;
+}
+.blind{
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}

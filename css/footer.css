@@ -1,0 +1,133 @@
+#foot-banner{
+    clear: both;
+    position: relative;
+    margin: 35px auto;
+    overflow: hidden;
+}
+#foot-banner .site{
+    max-width: 100%;
+    overflow: hidden;
+}
+#foot-banner .site .view{
+    max-width: 100%;
+    overflow: hidden;
+    width: calc(100% -200px);
+    height: 45px !important;
+}
+#foot-banner .site .view .list{
+    height: 100%;
+}
+#foot-banner .site .view .list li{
+    float: left;
+    position: relative;
+    margin: 0 5px;
+}
+#foot-banner .site .controls{
+    height: 45px;
+    overflow: hidden;
+}
+#foot-banner .site .controls>div{
+    display: inline-block;
+}
+#foot-banner .site .controls a{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin-right: -3px;
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    text-align: center;
+    line-height: 40px;
+    font-size: 11px;
+    cursor: pointer;
+}
+#foot-banner .site .controls-auto a:first-child{
+    display: none;
+}
+
+
+
+#footer{
+    clear: both;
+    position: relative;
+    background-color: #1c1f3a;
+    margin: auto;
+    padding: 47px 0 56px;
+    font-weight: 300;
+}
+#footer .footer-wrap{
+    color: #d5d5d5;
+    font-size: 16px;
+    font-weight: 200;
+}
+#footer .footer-nav{
+    position: relative;
+}
+#footer .fnb li{
+    position: relative;
+    float: left;
+}
+#footer .fnb li:first-child a{
+    display: block;
+    position: relative;
+    padding-right: 10px;
+}
+#footer .fnb li:nth-child(n+2) a{
+    display: block;
+    position: relative;
+    padding: 0 10px;
+}
+#footer .fnb a.point{
+    color: #ec411b;
+}
+#footer .fnb a:hover{
+    text-decoration: underline;
+}
+#footer .fnb li:nth-child(n+2) a:before{
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 1px;
+    height: 10px;
+    background-color: #9c9c9c;
+    content: '';
+}
+
+#footer .site-list{
+    width: 247px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 90;
+}
+#footer .site-list a{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 8px 35px 8px 20px;
+    border: 1px solid #bebebe;
+}
+#footer .site-list a:hover{
+    text-decoration: underline;
+}
+#footer .site-list a i{
+    position: absolute;
+    right: 15px;
+    top: 13px;
+}
+
+#footer .footer-info{
+    padding-top: 25px;
+}
+#footer .footer-info address{
+    float: left;
+    font-style: normal;
+    margin-right: 10px;
+}
+#footer .mark{
+    position: absolute;
+    right: 560px;
+    bottom: -5px;
+}
