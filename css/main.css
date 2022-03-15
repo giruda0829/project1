@@ -82,6 +82,10 @@
     display: none;
     position: relative;
 }
+#m-section1 .tab-tit{
+    position: relative;
+    display: inline-block;
+}
 #m-section1 .m-c1-1-area:nth-of-type(1){
     display: block;
 }
@@ -338,7 +342,7 @@
     padding-top: 40px;
 }
 #m-section3::after{
-    background: url(../img/report_bg.gif) no-repeat center 0;
+    background: url(../img/con3/report_bg.gif) no-repeat center 0;
 }
 #m-section3 .publication-area{
     display: inline-block;

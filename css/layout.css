@@ -50,6 +50,48 @@ input,select,button,textarea{
     width: 100%;
     height: 200px;
 }
+#back-top-btn{
+    position: fixed;
+	bottom: 11em;
+	right: .7em;
+	background-color: #76798f;
+	color: #fff;
+	text-transform: uppercase;
+    text-align: center;
+	font-weight: 300;
+	display: inline-block;
+	font-size: 1em;
+	text-decoration: none;
+	transition: all .5s ease-in-out;
+	opacity: 0;
+    padding: 9px 17px;
+}
+#back-top-btn i{
+    font-size: 20px;
+}
+#back-top-btn.opacity{
+    opacity: 1;
+}
+#back-top-btn:hover{
+    animation: updown 1.3s ease-in-out infinite;
+    text-decoration: underline;
+}
+#back-top-btn:hover a>span{
+    animation: updown2 1.3s infinite;
+}
+@keyframes updown{
+    0%{transform: translateY(0%);}
+    30%{transform: translateY(-15%);}
+    70%{transform: translateY(-15%);}
+    100%{transform: translateY(0%);}
+}
+@keyframes updown2{
+    0%{transform: translateY(0%);}
+    30%{transform: translateY(0%);}
+    50%{transform: translateY(-20%);}
+    70%{transform: translateY(0%);}
+    100%{transform: translateY(0%);}
+}
 
 
 /* 컨테이너 */
