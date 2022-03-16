@@ -10,6 +10,8 @@ img{
 body{
     font-family: Noto Sans KR, sans-serif;
     overflow-x: hidden;
+    font-size: 16px;
+    font-weight: 300;
 }
 ul,ol,li,dl,dt,dd{
     list-style: none;
@@ -28,7 +30,6 @@ input,select,button,textarea{
 }
 /* layout */
 #wrap{
-    font-size: 14px;
     color: #333333;
     text-align: center;
 }

@@ -9,9 +9,10 @@
     overflow: hidden;
 }
 #foot-banner .site .view{
-    max-width: 100%;
+    width: 100%;
+    max-width: 1140px;
     overflow: hidden;
-    width: calc(100% -200px);
+    width: calc(100% -210px);
     height: 45px !important;
 }
 #foot-banner .site .view .list{
@@ -20,7 +21,7 @@
 #foot-banner .site .view .list li{
     float: left;
     position: relative;
-    margin: 0 5px;
+    margin: 0 4px;
 }
 #foot-banner .site .controls{
     height: 45px;
@@ -33,7 +34,7 @@
     display: inline-block;
     width: 45px;
     height: 45px;
-    margin-right: -3px;
+    margin-right: -4px;
     background-color: #fff;
     border: 1px solid #e3e3e3;
     text-align: center;

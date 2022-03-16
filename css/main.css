@@ -47,6 +47,7 @@
     transition: all .3s;
     margin-right: 5px;
     letter-spacing: -1px;
+    font-weight: 500;
 }
 .tab-tit>a:hover,
 .tab-tit>a.active,
@@ -80,7 +81,8 @@
 }
 #m-section1 .m-c1-1-area{
     display: none;
-    position: relative;
+    position: absolute;
+    top: 80px;
 }
 #m-section1 .tab-tit{
     position: relative;
