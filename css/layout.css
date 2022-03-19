@@ -40,7 +40,7 @@ textarea {
 }
 /* layout */
 #wrap {
-  color: #333333;
+  color: #777;
   text-align: center;
 }
 #header {
@@ -54,7 +54,7 @@ textarea {
   position: relative;
 }
 #main {
-  margin-top: 50px;
+  margin-top: 100px;
   width: 100%;
 }
 #footer {

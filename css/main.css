@@ -216,6 +216,10 @@
   height: 301px;
   overflow: hidden;
 }
+#m-section1 .m-c1-2 ul li a .img img{
+  
+  width: 100%;
+}
 #m-section1 .m-c1-2 ul li a .tit {
   display: block;
   color: #222;

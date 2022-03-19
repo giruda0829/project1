@@ -100,6 +100,28 @@
     <link rel="stylesheet" href="css/submenu.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/footer.css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- jq -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- js -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./java/submenu.js"></script>
   </head>
 
   <body>
@@ -120,7 +142,6 @@
                   />
                   <button type="submit" name="button" class="btn">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <span class="sr_only">검색</span>
                   </button>
                 </form>
               </div>
@@ -1179,8 +1200,8 @@
               </p>
             </div>
             <div class="h-banner-content fr">
-              <ul>
-                <li class="active">
+              <ul class="h-content-slide">
+                <li>
                   <a href="#" class="txtbox">
                     <strong class="tit"
                       >2022년도 정부R&D사업 온라인 부처합동 설명회 개최</strong
@@ -1202,12 +1223,20 @@
                 <li>
                   <a href="#" class="txtbox">
                     <strong class="tit"
-                      >이경수 과학기술혁신본부장 KISTEP 방원</strong>
-                    <span class="txt">과학기술정보통신부 이경수 과학기술혁신본부장이 1월 14일(금) 한국과학기술기획평가원(KISTEP, 원장 정병선)을 찾아 기관의 주요 현황을 ..</span>
+                      >이경수 과학기술혁신본부장 KISTEP 방원</strong
+                    >
+                    <span class="txt"
+                      >과학기술정보통신부 이경수 과학기술혁신본부장이 1월
+                      14일(금) 한국과학기술기획평가원(KISTEP, 원장 정병선)을
+                      찾아 기관의 주요 현황을 ..</span
+                    >
                     <span class="more">자세히 보기</span>
                   </a>
                   <a href="#" class="imgbox">
-                    <img src="./img/header/content2.jpg" alt="이경수 과학기술혁신본부장 KISTEP 방원" />
+                    <img
+                      src="./img/header/content2.jpg"
+                      alt="이경수 과학기술혁신본부장 KISTEP 방원"
+                    />
                   </a>
                 </li>
                 <li>
@@ -1216,7 +1245,9 @@
                       >범부처 통합연구지원시스템(IRIS) 개통식 개최</strong
                     >
                     <span class="txt"
-                      >연구자 중심의 연구환경 조성을 위한 범부처 통합연구시스템(Integrated Research Information System; IRIS, 이하 IRIS)이 본격 개통된다...</span
+                      >연구자 중심의 연구환경 조성을 위한 범부처
+                      통합연구시스템(Integrated Research Information System;
+                      IRIS, 이하 IRIS)이 본격 개통된다...</span
                     >
                     <span class="more">자세히 보기</span>
                   </a>
@@ -1233,7 +1264,9 @@
                       >23년도 국가연구개발 투자방향 온라인 공청회 개최</strong
                     >
                     <span class="txt"
-                      >과학기술정보통신부(이하 과기정통부)가 주최하고 한국과학기술기획평가원(이하 KISTEP)이 주관하는 ‘2023년도 국가연구개발 투자방향..</span
+                      >과학기술정보통신부(이하 과기정통부)가 주최하고
+                      한국과학기술기획평가원(이하 KISTEP)이 주관하는 ‘2023년도
+                      국가연구개발 투자방향..</span
                     >
                     <span class="more">자세히 보기</span>
                   </a>
@@ -1245,57 +1278,48 @@
                   </a>
                 </li>
               </ul>
-              <div class="controls fl">
-                <div class="controls-btn">
-                  <a class="btn prev">
-                    <i class="fa-solid fa-chevron-left"></i>
-                  </a>
-                  <a class="btn next">
-                    <i class="fa-solid fa-chevron-right"></i>
-                  </a>
-                </div>
-                <div class="controls-auto">
-                  <a href="" class="btn start">
-                    <i class="fa-solid fa-play"></i>
-                  </a>
-                  <a href="" class="btn stop">
-                    <i class="fa-solid fa-grip-lines-vertical"></i>
-                  </a>
-                </div>
+              <div class="controls-auto">
+                <button class="slide-start" type="button"></button>
+                <button class="slide-stop" type="button"></button>
               </div>
             </div>
-            <div class="h-banner-btn">
-              <div class="h-banner-btn1 fl cf">
-                <i class="fa-solid fa-arrow-left-long"></i>
-              </div>
-              <div class="h-banner-btn2 fl">
-                <i class="fa-solid fa-arrow-right-long"></i>
-              </div>
-            </div>
+            <script>
+              $(".h-content-slide").slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2500,
+              });
+              $(".slide-stop").click(function () {
+                $(".h-content-slide").stop();
+              });
+            </script>
           </div>
         </div>
-        <div class="h-slider">
+        <div id="h-slider">
           <div class="h-banner-slider">
             <ul class="slider">
               <li>
-                <p class="img1 image">
-                  슬라이드 첫 번째 하늘을 향해 펜을 들고 있는 여성의 사진
-                </p>
+                <div class="img1 image">
+                  <img src="./img/header/20210326182433940.jpg" alt="" style="background-repeat: no-repeat; background-position: center center; background-size: cover;">
+                </div>
               </li>
               <li>
-                <p class="img2 image active">
-                  어두운 배경에 인간형 로봇이 전자기기를 손가락으로 조작하고
-                  있는 사진
-                </p>
+                <div class="img2 image">
+                </div>
               </li>
               <li>
-                <p class="img3 image">
-                  어두운 배경에 사람의 손 위로 큐브가 조각나 조각과 손가락
-                  사이에서 주황 빛이 번쩍이는 사진
-                </p>
+                <div class="img3 image">
+                </div>
               </li>
             </ul>
           </div>
+          <script>
+            $(".slider").slick({
+              slidesToShow: 1,
+              slidesToScroll: 1
+            });
+          </script>
         </div>
         <!-- //#h-banner -->
       </header>
@@ -1656,7 +1680,7 @@
               </div>
               <!-- //.m-c1-1 -->
               <div class="m-c1-2">
-                <ul>
+                <ul class="m-c1-2-slider">
                   <li>
                     <a href="./project1_form.html">
                       <span class="img">
@@ -1680,6 +1704,14 @@
                     </a>
                   </li>
                 </ul>
+                <script>
+                  $(".m-c1-2-slider").slick({
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    autoplay:true,
+                    autoplaySpeed:2000
+                  });
+                </script>
                 <p class="total-count">
                   총
                   <span class="count-txt">
@@ -2327,53 +2359,33 @@
                     <li>
                       <a href="./project1_form.html">
                         <span class="thumb">
-                          <img
-                            src="./img/con3/2-2-1.jpg"
-                            alt="2022년 1월"
-                          />
+                          <img src="./img/con3/2-2-1.jpg" alt="2022년 1월" />
                         </span>
-                        <strong class="tit"
-                          >2022년 1월</strong
-                        ></a
+                        <strong class="tit">2022년 1월</strong></a
                       >
                     </li>
                     <li>
                       <a href="./project1_form.html">
                         <span class="thumb">
-                          <img
-                            src="./img/con3/2-2-2.jpg"
-                            alt="2021년 12월"
-                          />
+                          <img src="./img/con3/2-2-2.jpg" alt="2021년 12월" />
                         </span>
-                        <strong class="tit"
-                          >2021년 12월.</strong
-                        ></a
+                        <strong class="tit">2021년 12월.</strong></a
                       >
                     </li>
                     <li>
                       <a href="./project1_form.html">
                         <span class="thumb">
-                          <img
-                            src="./img/con3/2-2-3.jpg"
-                            alt="2021년 11월"
-                          />
+                          <img src="./img/con3/2-2-3.jpg" alt="2021년 11월" />
                         </span>
-                        <strong class="tit"
-                          >2021년 11월</strong
-                        ></a
+                        <strong class="tit">2021년 11월</strong></a
                       >
                     </li>
                     <li>
                       <a href="./project1_form.html">
                         <span class="thumb">
-                          <img
-                            src="./img/con3/2-2-4.jpg"
-                            alt="2021년 10월"
-                          />
+                          <img src="./img/con3/2-2-4.jpg" alt="2021년 10월" />
                         </span>
-                        <strong class="tit"
-                          >2021년 10월</strong
-                        ></a
+                        <strong class="tit">2021년 10월</strong></a
                       >
                     </li>
                   </ul>
@@ -2554,7 +2566,8 @@
                         </span>
                         <strong class="tit"
                           >정부 R&D투자의 전략성 제고를 위한 경제적..</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2566,8 +2579,10 @@
                           />
                         </span>
                         <strong class="tit"
-                          >정부R&D사업 기획평가관리비의 전략적 편성 방안 연구</strong
-                        ></a>
+                          >정부R&D사업 기획평가관리비의 전략적 편성 방안
+                          연구</strong
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2579,8 +2594,10 @@
                           />
                         </span>
                         <strong class="tit"
-                          >2021년 전략적 R&D예산 배분 및 편성을 위한 정책기반 구축에 관한 연구</strong
-                        ></a>
+                          >2021년 전략적 R&D예산 배분 및 편성을 위한 정책기반
+                          구축에 관한 연구</strong
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2592,8 +2609,10 @@
                           />
                         </span>
                         <strong class="tit"
-                          >과기 출연연 기관평가의 새로운 접근법 탐색 연구</strong
-                        ></a>
+                          >과기 출연연 기관평가의 새로운 접근법 탐색
+                          연구</strong
+                        ></a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -2608,9 +2627,8 @@
                             alt="2021년 기술영향평가"
                           />
                         </span>
-                        <strong class="tit"
-                          >2021년 기술영향평가</strong
-                        ></a>
+                        <strong class="tit">2021년 기술영향평가</strong></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2623,7 +2641,8 @@
                         </span>
                         <strong class="tit"
                           >2022년 KISTEP 미래유망기술 선정에 관한 연..</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2636,7 +2655,8 @@
                         </span>
                         <strong class="tit"
                           >미래 불확실성에 대응하는 환경변화 탐색 및..</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2649,7 +2669,8 @@
                         </span>
                         <strong class="tit"
                           >2021년 기술수준평가 -기술수준평가 방법론..</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -2666,7 +2687,8 @@
                         </span>
                         <strong class="tit"
                           >성장동력의 공공-민간 파트너십 강화를 위한..</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2679,7 +2701,8 @@
                         </span>
                         <strong class="tit"
                           >범부처 사회문제해결 기반 구축</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2692,7 +2715,8 @@
                         </span>
                         <strong class="tit"
                           >2020년도 과학기술분야 중장기계획 조사·분석</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2705,7 +2729,8 @@
                         </span>
                         <strong class="tit"
                           >2021년도 지역 R&D체계 발전 방향에 관한 연구</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -2722,7 +2747,8 @@
                         </span>
                         <strong class="tit"
                           >정부 R&D투자의 전략성 제고를 위한 경제적..</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2734,8 +2760,10 @@
                           />
                         </span>
                         <strong class="tit"
-                          >정부R&D사업 기획평가관리비의 전략적 편성 방안 연구</strong
-                        ></a>
+                          >정부R&D사업 기획평가관리비의 전략적 편성 방안
+                          연구</strong
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2747,8 +2775,10 @@
                           />
                         </span>
                         <strong class="tit"
-                          >2021년 전략적 R&D예산 배분 및 편성을 위한 정책기반 구축에 관한 연구</strong
-                        ></a>
+                          >2021년 전략적 R&D예산 배분 및 편성을 위한 정책기반
+                          구축에 관한 연구</strong
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2761,7 +2791,8 @@
                         </span>
                         <strong class="tit"
                           >2021년도 글로벌 R&D 투자동향 분석</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -2777,8 +2808,10 @@
                           />
                         </span>
                         <strong class="tit"
-                          >국가연구개발 연구성과 관리·활용 실태조사 최종보고서</strong
-                        ></a>
+                          >국가연구개발 연구성과 관리·활용 실태조사
+                          최종보고서</strong
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2791,7 +2824,8 @@
                         </span>
                         <strong class="tit"
                           >2021년 연구성과 관리활용 및 운영지원</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2804,7 +2838,8 @@
                         </span>
                         <strong class="tit"
                           >정부R&D 등록·기탁 성과물 심층분석 연구</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2816,8 +2851,10 @@
                           />
                         </span>
                         <strong class="tit"
-                          >과학기술혁신정책 글로벌 역량 및 전문성 강화 연구</strong
-                        ></a>
+                          >과학기술혁신정책 글로벌 역량 및 전문성 강화
+                          연구</strong
+                        ></a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -2833,8 +2870,10 @@
                           />
                         </span>
                         <strong class="tit"
-                          >과기 출연연 기관평가의 새로운 접근법 탐색 연구</strong
-                        ></a>
+                          >과기 출연연 기관평가의 새로운 접근법 탐색
+                          연구</strong
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2846,8 +2885,10 @@
                           />
                         </span>
                         <strong class="tit"
-                          >2021년 국가연구개발 성과평가 정책 수립 및 성과평가 실시</strong
-                        ></a>
+                          >2021년 국가연구개발 성과평가 정책 수립 및 성과평가
+                          실시</strong
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2860,7 +2901,8 @@
                         </span>
                         <strong class="tit"
                           >“공공기술개발” 유형 국가연구개발사업 성..</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2873,7 +2915,8 @@
                         </span>
                         <strong class="tit"
                           >2021년 국가연구개발사업 상위평가 보고서(..</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -2890,7 +2933,8 @@
                         </span>
                         <strong class="tit"
                           >국가연구개발사업 예비타당성조사 수행 세부..</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2903,7 +2947,8 @@
                         </span>
                         <strong class="tit"
                           >국2021년 R&D사업 예비타당성조사 일관성 제고..</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2916,7 +2961,8 @@
                         </span>
                         <strong class="tit"
                           >2021년 국가R&D사업 사전분석 전문 네트워크..</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                     <li>
                       <a href="./project1_form.html">
@@ -2929,7 +2975,8 @@
                         </span>
                         <strong class="tit"
                           >2021년도 사업계획 적정성 재검토 보고서 재..</strong
-                        ></a>
+                        ></a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -3100,24 +3147,32 @@
                     />
                   </a>
                 </li>
+                <li>
+                  <a href="./project1_form.html">
+                    <img
+                      src="./img/foot/KIRD.gif"
+                      alt="HPP 과학기술인재정책 플랫폼"
+                    />
+                  </a>
+                </li>
               </ul>
+              <script>
+                $(".view .list").slick({
+                  slidesToShow: 6,
+                  slidesToScroll: 1,
+                  autoplay: true,
+                  autoplaySpeed: 2000,
+                });
+              </script>
             </div>
             <div class="controls pr fl">
-              <div class="controls-btn">
-                <a class="btn prev">
-                  <i class="fa-solid fa-chevron-left"></i>
-                </a>
-                <a class="btn next">
-                  <i class="fa-solid fa-chevron-right"></i>
-                </a>
-              </div>
               <div class="controls-auto">
-                <a href="" class="btn start">
+                <button type="button" class="btn start">
                   <i class="fa-solid fa-play"></i>
-                </a>
-                <a href="" class="btn stop">
+                </button>
+                <button type="button" class="btn stop">
                   <i class="fa-solid fa-grip-lines-vertical"></i>
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -3182,7 +3237,6 @@
         ><i class="fa-solid fa-caret-up"></i><br /><span>TOP</span></a
       >
     </div>
-    <script src="./java/jquery-3.6.0.min.js"></script>
     <script src="./java/topbtn.js"></script>
   </body>
 </html>
