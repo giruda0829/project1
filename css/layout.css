@@ -10,7 +10,7 @@ img {
   border: 0;
 }
 body {
-  font-family: Noto Sans KR, sans-serif;
+  font-family: Noto Sans KR, "맑은 고딕", Malgun Gothic, "돋움", Dotum, "굴림", Gulim, Tahoma, Verdana, AppleGothic, UnDotum, sans-serif;
   overflow-x: hidden;
   font-size: 16px;
   font-weight: 300;

@@ -12,7 +12,7 @@
   text-align: center;
   overflow: hidden;
 }
-#m-section1 ~ [id*="section"] .more i {
+#m-section1 ~ [id*="section"] .more>i {
   width: 100%;
   height: 100%;
   color: #2c3e50;
@@ -51,8 +51,7 @@
   font-weight: 500;
 }
 .tab-tit > a:hover,
-.tab-tit > a.active,
-.tab-tit:nth-of-type(1) > a {
+.tab-tit > a.active{
   background: #121d76;
   box-shadow: 4px 4px 5px rgb(0 0 0 / 10%);
   color: #fff;
@@ -80,21 +79,20 @@
   float: left;
 }
 #m-section1 .m-c1-1-area {
-  display: none;
   position: absolute;
   top: 80px;
+  opacity: 0;
+  transition: all .5s;
 }
 #m-section1 .tab-tit {
   position: relative;
   display: inline-block;
 }
-#m-section1 .m-c1-1-area:nth-of-type(1) {
-  display: block;
-}
 #m-section1 .m-c1-1-area.active {
-  display: block;
+  opacity: 1;
 }
 #m-section1 ul.news li {
+  width: 600px;
   text-align: left;
   position: relative;
   margin-top: 13px;
@@ -143,7 +141,7 @@
   color: #222;
   text-align: center;
   font: 14px /1.2 Montserrat;
-  font-weight: 500;
+  font-weight: 300;
 }
 #m-section1 ul.news li:first-child .date > span {
   display: block;
@@ -462,6 +460,9 @@
   left: 50%;
   width: 100%;
   transform: translate(-50%, -50%) translate(0.5px, 0.5px);
+}
+#m-section3 .publication-content .tit{
+  color: #000;
 }
 #m-section3 .publication-content .tit:hover {
   text-decoration: underline;

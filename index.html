@@ -768,6 +768,7 @@
               <!-- //.h-nav-menu -->
               <div class="h-nav-btn fr">
                 <span>사이트맵 열기</span>
+                <div class="btn"></div>
               </div>
               <!-- //.h-nav-btn -->
             </div>
@@ -1288,10 +1289,12 @@
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 autoplay: true,
-                autoplaySpeed: 2500,
+                autoplaySpeed: 3000,
               });
               $(".slide-stop").click(function () {
-                $(".h-content-slide").stop();
+                $(".h-content-slide").slick({
+                  autoplay: false,
+                });
               });
             </script>
           </div>
@@ -1301,16 +1304,22 @@
             <ul class="slider">
               <li>
                 <div class="img1 image">
-                  <img src="./img/header/20210326182433940.jpg" alt="" style="background-repeat: no-repeat; background-position: center center; background-size: cover;">
+                  <img
+                    src="./img/header/20210326182433940.jpg"
+                    alt=""
+                    style="
+                      background-repeat: no-repeat;
+                      background-position: center center;
+                      background-size: cover;
+                    "
+                  />
                 </div>
               </li>
               <li>
-                <div class="img2 image">
-                </div>
+                <div class="img2 image"></div>
               </li>
               <li>
-                <div class="img3 image">
-                </div>
+                <div class="img3 image"></div>
               </li>
             </ul>
           </div>
@@ -1329,10 +1338,10 @@
           <div class="inner">
             <div>
               <div class="m-c1-1 pr">
-                <h2 class="tab-tit fl">
-                  <a href="#notice">공지사항</a>
+                <h2 class="tab-tit notice fl">
+                  <a href="#m-section1" class="active">공지사항</a>
                 </h2>
-                <div id="notice" class="m-c1-1-area">
+                <div id="notice" class="m-c1-1-area active">
                   <ul class="news">
                     <li>
                       <a href="./project1_form.html">
@@ -1350,7 +1359,7 @@
                         </div>
                       </a>
                       <span class="date">
-                        "2022.03."
+                        2022.03.
                         <span>10</span>
                       </span>
                     </li>
@@ -1413,8 +1422,8 @@
                     </li>
                   </ul>
                 </div>
-                <h2 class="tab-tit fl">
-                  <a href="#tender">입찰공고</a>
+                <h2 class="tab-tit tender fl">
+                  <a href="#m-section1">입찰공고</a>
                 </h2>
                 <div id="tender" class="m-c1-1-area">
                   <ul class="news">
@@ -1422,86 +1431,77 @@
                       <a href="./project1_form.html">
                         <div class="tit">
                           <i class="fa-solid fa-circle-n"></i>
-                          <strong> 2022년도 연구지원체계평가 안내</strong>
-                        </div>
-                        <div class="txt">
-                          <span
-                            >과학기술정보통신부 공고 제2022–0283호 2022년도
-                            연구지원체계평가 안내 『2022년도
-                            연구지원체계평가』를 다음과 같이
-                            실시할전망이다.</span
+                          <strong
+                            >[본공고] 국가 R&D 기획관리 지원서비스 구축</strong
                           >
                         </div>
+                        <div class="txt">
+                          <span>2022-04-06 10:00:00</span>
+                        </div>
                       </a>
                       <span class="date">
-                        "2022.03."
-                        <span>10</span>
+                        2022.04
+                        <span>06</span>
                       </span>
                     </li>
                     <li>
-                      <a href="./project1_form.html" class="txt"
-                        >정보보안과 개인정보보호 습관화 홍보 배너 게시</a
-                      >
+                      <a href="./project1_form.html" class="txt">
+                        [사전공고] 2022년 1차 수시 사업타당성조사 비용분석
+                      </a>
+                      <span class="date">
+                        2022.03.
+                        <span>20</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [사전공고] 핵심기술별 등록특허 DB구축과 기술경쟁력 분석
+                      </a>
+                      <span class="date">
+                        2022.03.
+                        <span>20</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [사전공고] 2022년 한국과학기술기획평가원 직원 건강검진
+                      </a>
+                      <span class="date">
+                        2022.03.
+                        <span>19</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [사전공고] 국가 R&D 기획관리 지원서비스 구축
+                      </a>
+                      <span class="date">
+                        2022.03.
+                        <span>16</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [본공고] 2022년도 KISTEP InI 발간
+                      </a>
+                      <span class="date">
+                        2022.03.
+                        <span>04</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [사전공고] 2022년도 KISTEP InI 발간
+                      </a>
                       <span class="date">
                         2022.02.
-                        <span>24</span>
-                      </span>
-                    </li>
-                    <li>
-                      <a href="./project1_form.html" class="txt"
-                        >[초청]「2023년도 국가연구개발 투자방향 및
-                        기준(안)」온라인 공..</a
-                      >
-                      <span class="date">
-                        2022.02.
-                        <span>21</span>
-                      </span>
-                    </li>
-                    <li>
-                      <a href="./project1_form.html" class="txt">
-                        2021년도 산하기관 부패방지 시책평가 결과 안내
-                      </a>
-                      <span class="date">
-                        2021.12.
-                        <span>27</span>
-                      </span>
-                    </li>
-                    <li>
-                      <a href="./project1_form.html" class="txt">
-                        [안내] 2022년 KISTEP 연구주제,아이디어 수요조사 - 우수
-                        제안 ..
-                      </a>
-                      <span class="date">
-                        2021.12.
-                        <span>27</span>
-                      </span>
-                    </li>
-                    <li>
-                      <a href="./project1_form.html" class="txt">
-                        공공기관 고객만족도 조사 실시 안내
-                      </a>
-                      <span class="date">
-                        2021.11.
-                        <span>24</span>
-                      </span>
-                    </li>
-                    <li>
-                      <a href="./project1_form.html" class="txt">
-                        [설문] 2022년 과학기술혁신정책 연구주제 및 아이디어
-                        수요조사..
-                      </a>
-                      <span class="date">
-                        2021.11.
-                        <span>22</span>
+                        <span>19</span>
                       </span>
                     </li>
                   </ul>
-                  <a href="./project1_form.html" class="more">
-                    <i class="fa-thin fa-plus"></i>
-                  </a>
                 </div>
-                <h2 class="tab-tit fl">
-                  <a href="#recruit">채용공고</a>
+                <h2 class="tab-tit recruit fl">
+                  <a href="#m-section1">채용공고</a>
                 </h2>
                 <div id="recruit" class="m-c1-1-area">
                   <ul class="news">
@@ -1509,86 +1509,85 @@
                       <a href="./project1_form.html">
                         <div class="tit">
                           <i class="fa-solid fa-circle-n"></i>
-                          <strong> 2022년도 연구지원체계평가 안내</strong>
+                          <strong>
+                            사업조정본부 거대공공사업센터 육아휴직 대체인력 채용
+                            3차공고</strong
+                          >
                         </div>
                         <div class="txt">
                           <span
-                            >과학기술정보통신부 공고 제2022–0283호 2022년도
-                            연구지원체계평가 안내 『2022년도
-                            연구지원체계평가』를 다음과 같이
-                            실시할전망이다.</span
+                            >한국과학기술기획평가원 거대공공사업센터 육아휴직
+                            대체인력 채용 공고 한국과학기술기획평가원 채용은
+                            직무능력중심 블라..</span
                           >
                         </div>
                       </a>
                       <span class="date">
-                        "2022.03."
-                        <span>10</span>
-                      </span>
-                    </li>
-                    <li>
-                      <a href="./project1_form.html" class="txt"
-                        >정보보안과 개인정보보호 습관화 홍보 배너 게시</a
-                      >
-                      <span class="date">
-                        2022.02.
-                        <span>24</span>
-                      </span>
-                    </li>
-                    <li>
-                      <a href="./project1_form.html" class="txt"
-                        >[초청]「2023년도 국가연구개발 투자방향 및
-                        기준(안)」온라인 공..</a
-                      >
-                      <span class="date">
-                        2022.02.
-                        <span>21</span>
+                        2022.03.
+                        <span>14</span>
                       </span>
                     </li>
                     <li>
                       <a href="./project1_form.html" class="txt">
-                        2021년도 산하기관 부패방지 시책평가 결과 안내
+                        한국과학기술기획평가원 지역정책팀 육아휴직 대체인력 채용
+                        공고
+                      </a>
+                      <span class="date">
+                        2022.02.
+                        <span>11</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        사업조정본부 거대공공사업센터 육아휴직 대체인력 채용
+                        재공고
+                      </a>
+                      <span class="date">
+                        2022.02.
+                        <span>09</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        사업조정본부 거대공공사업센터 육아휴직 대체인력 채용
+                        재공고
+                      </a>
+                      <span class="date">
+                        2022.01.
+                        <span>05</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        제2022-1회 한국과학기술기획평가원 정규직 공개채용
                       </a>
                       <span class="date">
                         2021.12.
-                        <span>27</span>
+                        <span>09</span>
                       </span>
                     </li>
                     <li>
                       <a href="./project1_form.html" class="txt">
-                        [안내] 2022년 KISTEP 연구주제,아이디어 수요조사 - 우수
-                        제안 ..
-                      </a>
-                      <span class="date">
-                        2021.12.
-                        <span>27</span>
-                      </span>
-                    </li>
-                    <li>
-                      <a href="./project1_form.html" class="txt">
-                        공공기관 고객만족도 조사 실시 안내
+                        사업조정본부 거대공공사업센터 육아대체인력 채용 공고
                       </a>
                       <span class="date">
                         2021.11.
-                        <span>24</span>
+                        <span>02</span>
                       </span>
                     </li>
                     <li>
                       <a href="./project1_form.html" class="txt">
-                        [설문] 2022년 과학기술혁신정책 연구주제 및 아이디어
-                        수요조사..
+                        제2022-1회 한국과학기술기획평가원 위촉연구원 공개채용
                       </a>
                       <span class="date">
                         2021.11.
-                        <span>22</span>
+                        <span>01</span>
                       </span>
                     </li>
                   </ul>
-                  <a href="./project1_form.html" class="more">
-                    <i class="fa-thin fa-plus"></i>
-                  </a>
                 </div>
-                <h2 class="tab-tit fl">
-                  <a href="#task">과제공모</a>
+                <h2 class="tab-tit task fl">
+                  <a href="#m-section1">과제공모</a>
                 </h2>
                 <div id="task" class="m-c1-1-area">
                   <ul class="news">
@@ -1596,91 +1595,115 @@
                       <a href="./project1_form.html">
                         <div class="tit">
                           <i class="fa-solid fa-circle-n"></i>
-                          <strong> 2022년도 연구지원체계평가 안내</strong>
+                          <strong
+                            >2022년 KISTEP 주요사업 위탁연구과제 공모(공모명 :
+                            핵심기술별..</strong
+                          >
                         </div>
                         <div class="txt">
                           <span
-                            >과학기술정보통신부 공고 제2022–0283호 2022년도
-                            연구지원체계평가 안내 『2022년도
-                            연구지원체계평가』를 다음과 같이
-                            실시할전망이다.</span
+                            >2022년 KISTEP 위탁연구과제 공모
+                            한국과학기술기획평가원(KISTEP)에서는 2022년
+                            기관고유사업으로 추진할 위탁연구 과제를 아..</span
                           >
                         </div>
                       </a>
                       <span class="date">
-                        "2022.03."
-                        <span>10</span>
+                        2022.03.
+                        <span>04</span>
                       </span>
                     </li>
                     <li>
-                      <a href="./project1_form.html" class="txt"
-                        >정보보안과 개인정보보호 습관화 홍보 배너 게시</a
-                      >
+                      <a href="./project1_form.html" class="txt">
+                        [재공고] 2021년도 혁신도전 프로젝트 사업 연구기획과제
+                        재공모..
+                      </a>
                       <span class="date">
                         2022.02.
                         <span>24</span>
                       </span>
                     </li>
                     <li>
-                      <a href="./project1_form.html" class="txt"
-                        >[초청]「2023년도 국가연구개발 투자방향 및
-                        기준(안)」온라인 공..</a
-                      >
+                      <a href="./project1_form.html" class="txt">
+                        [공모] 2022년도 과학기술혁신정책지원사업 연구과제 공모
+                      </a>
                       <span class="date">
                         2022.02.
-                        <span>21</span>
+                        <span>25</span>
                       </span>
                     </li>
                     <li>
                       <a href="./project1_form.html" class="txt">
-                        2021년도 산하기관 부패방지 시책평가 결과 안내
+                        [공고] 2021년도 혁신도전 프로젝트 사업 연구기획과제
+                        공모(제4..
                       </a>
                       <span class="date">
-                        2021.12.
-                        <span>27</span>
+                        2022.01.
+                        <span>26</span>
                       </span>
                     </li>
                     <li>
                       <a href="./project1_form.html" class="txt">
-                        [안내] 2022년 KISTEP 연구주제,아이디어 수요조사 - 우수
-                        제안 ..
+                        [재공고] 2021년도 혁신도전 프로젝트 사업 연구기획과제
+                        재공모..
                       </a>
                       <span class="date">
-                        2021.12.
-                        <span>27</span>
+                        2021.10.
+                        <span>15</span>
                       </span>
                     </li>
                     <li>
                       <a href="./project1_form.html" class="txt">
-                        공공기관 고객만족도 조사 실시 안내
+                        [공고] 2021년도 혁신도전 프로젝트 사업 연구기획과제
+                        공모(제3..
                       </a>
                       <span class="date">
-                        2021.11.
-                        <span>24</span>
+                        2021.09.
+                        <span>15</span>
                       </span>
                     </li>
                     <li>
                       <a href="./project1_form.html" class="txt">
-                        [설문] 2022년 과학기술혁신정책 연구주제 및 아이디어
-                        수요조사..
+                        [재공모] 2021년도 과학기술혁신정책지원사업 연구과제
+                        재공모(2..
                       </a>
                       <span class="date">
-                        2021.11.
-                        <span>22</span>
+                        2021.08.
+                        <span>13</span>
                       </span>
                     </li>
                   </ul>
-                  <a href="./project1_form.html" class="more">
-                    <i class="fa-thin fa-plus"></i>
-                  </a>
                 </div>
                 <a href="./project1_form.html" class="more">
                   <i class="fa-thin fa-plus"></i>
                 </a>
               </div>
+              <script src="./java/m-section-tap.js"></script>
               <!-- //.m-c1-1 -->
               <div class="m-c1-2">
                 <ul class="m-c1-2-slider">
+                  <li>
+                    <a href="./project1_form.html">
+                      <span class="img">
+                        <img
+                          src="./img/con1/con1-1.jpg"
+                          alt="인쇄물출입업체등록안내"
+                        />
+                      </span>
+                      <strong class="tit">인쇄물출입업체등록안내</strong>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./project1_form.html">
+                      <span class="img">
+                        <img
+                          src="./img/con1/con1-2.jpg"
+                          alt="인쇄물출입업체등록안내"
+                        />
+                      </span>
+                      <strong class="tit">홈페이지 불편사항 신고</strong>
+                    </a>
+                  </li>
                   <li>
                     <a href="./project1_form.html">
                       <span class="img">
@@ -1708,8 +1731,8 @@
                   $(".m-c1-2-slider").slick({
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    autoplay:true,
-                    autoplaySpeed:2000
+                    autoplay: true,
+                    autoplaySpeed: 3000,
                   });
                 </script>
                 <p class="total-count">
@@ -1823,50 +1846,50 @@
         <div id="m-section3">
           <div class="inner">
             <div class="publication-area">
-              <h2 class="tab-tit">
-                <a href="#publication1">브리프</a>
+              <h2 class="tab-tit briefs">
+                <a href="#m-section3" class="active">브리프</a>
               </h2>
               <div id="publication1" class="tab-content cf active">
                 <nav>
                   <ul class="publication-nav fl">
-                    <li>
-                      <a href="publication1-1" class="active">
+                    <li class="all">
+                      <a href="#m-section3" class="active">
                         전체
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href="publication1-2">
+                    <li class="issue">
+                      <a href="#m-section3">
                         이슈페이퍼
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href="publication1-3">
+                    <li class="policy">
+                      <a href="#m-section3">
                         정책브리프
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href="publication1-4">
+                    <li class="statis">
+                      <a href="#m-section3">
                         통계브리프
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href="publication1-5">
+                    <li class="technology">
+                      <a href="#m-section3">
                         기술동향브리프
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href="publication1-6">
+                    <li class="Apple">
+                      <a href="#m-section3">
                         사과플러스
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href="publication1-7">
+                    <li class="future">
+                      <a href="#m-section3">
                         미래예측브리프
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
@@ -2266,32 +2289,32 @@
                   </ul>
                 </div>
               </div>
-              <h2 class="tab-tit">
-                <a href="#publication2">간행물</a>
+              <h2 class="tab-tit publication">
+                <a href="#m-section3">간행물</a>
               </h2>
               <div id="publication2" class="tab-content cf">
                 <nav>
                   <ul class="publication-nav fl">
-                    <li>
-                      <a href="publication2-1" class="active">
+                    <li class="all">
+                      <a href="#m-section3" class="active">
                         전체
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href="publication2-2">
+                    <li class="newsletter">
+                      <a href="#m-section3">
                         뉴스레터
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href="publication2-3">
+                    <li class="annual">
+                      <a href="#m-section3">
                         연차보고서
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href="publication2-4">
+                    <li class="lnl">
+                      <a href="#m-section3">
                         KISTEP lnl
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
@@ -2503,50 +2526,50 @@
                   </ul>
                 </div>
               </div>
-              <h2 class="tab-tit">
-                <a href="#publication3">보고서</a>
+              <h2 class="tab-tit report">
+                <a href="#m-section3">보고서</a>
               </h2>
               <div id="publication3" class="tab-content cf">
                 <nav>
                   <ul class="publication-nav fl">
-                    <li>
-                      <a href="publication3-1" class="active">
+                    <li class="all">
+                      <a href="#m-section3" class="active">
                         전체
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href="publication3-2">
+                    <li class="prediction">
+                      <a href="#m-section3">
                         미래예측
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href="publication3-3">
+                    <li class="planning">
+                      <a href="#m-section3">
                         정책기획
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href="publication3-4">
+                    <li class="business">
+                      <a href="#m-section3">
                         사업조정
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href="publication3-5">
+                    <li class="result">
+                      <a href="#m-section3">
                         성과확산
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href="publication3-6">
+                    <li class="evaluation">
+                      <a href="#m-section3">
                         조사·평가
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href="publication3-7">
+                    <li class="feasibility">
+                      <a href="#m-section3">
                         예비타당성
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
@@ -2981,6 +3004,7 @@
                   </ul>
                 </div>
               </div>
+              <script src="./java/m-section3-tap.js"></script>
               <a href="./project1_form.html" class="more">
                 <i class="fa-thin fa-plus"></i>
               </a>

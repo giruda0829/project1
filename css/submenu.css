@@ -105,6 +105,7 @@
   border-bottom: 1px solid #294190;
   color: #ffffff;
   font-size: 17px;
+  font-weight: 500;
   line-height: 1.4;
 }
 #h-nav .submenu .width100 .bg-dark:hover {
@@ -123,6 +124,7 @@
 }
 #h-nav .submenu .lnb-detail > li > a {
   color: #333;
+  font-weight: 500;
 }
 #h-nav .submenu .lnb-detail > li > a::before {
   position: absolute;

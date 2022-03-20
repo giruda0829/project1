@@ -104,6 +104,11 @@
 #h-nav.hover .h-nav-menu .menu-tit{
   color: #333;
 }
+#h-nav.hover .btn,
+#h-nav.hover .btn::before,
+#h-nav.hover .btn::after{
+  background-color: #333;
+}
 #h-nav .h-nav-logo img {
   height: 70px;
   margin-left: -9px;
@@ -142,20 +147,44 @@
 #h-nav .h-nav-menu > ul > li > a:focus::after {
   opacity: 1;
 }
-#h-nav .h-nav-menu > ul > li > a:hover #gnb,
-#h-nav .h-nav-menu > ul > li > a:focus #gnb {
-  background: #ffffff;
-  color: #333333;
-}
 
 #h-nav .h-nav-btn > input {
   display: none;
 }
-#h-nav .h-nav-btn i {
-  color: #fff;
-  font-size: 25px;
-  margin-top: 30px;
+#h-nav .h-nav-btn{
   cursor: pointer;
+  content: '';
+  width: 23px;
+  height: 30px;
+  position: relative;
+  top: 43px;
+}
+#h-nav .btn {
+  background-color: #fff;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  line-height: 30px;
+}
+#h-nav .btn::before {
+  background-color: #fff;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  top: -7px;
+  left: 0;
+  content: '';
+  border-radius: 3px;
+}
+#h-nav .btn::after {
+  background-color: #fff;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  content: '';
+  border-radius: 3px;
 }
 #h-nav .h-nav-btn > span {
   display: none;
@@ -190,6 +219,7 @@
 }
 #h-banner .h-banner-text p {
   font-size: 18px;
+  font-weight: 300;
   line-height: 1.5;
 }
 
