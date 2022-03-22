@@ -81,15 +81,12 @@
 #m-section1 .m-c1-1-area {
   position: absolute;
   top: 80px;
-  opacity: 0;
   transition: all .5s;
+  display: none;
 }
 #m-section1 .tab-tit {
   position: relative;
   display: inline-block;
-}
-#m-section1 .m-c1-1-area.active {
-  opacity: 1;
 }
 #m-section1 ul.news li {
   width: 600px;
@@ -351,10 +348,10 @@
   display: inline-block;
   position: relative;
   width: 100%;
+  min-height: 600px;
 }
 #m-section3 .tab-tit {
   margin-bottom: 30px;
-  position: relative;
   display: inline-block;
 }
 #m-section3 .tab-tit > a {
@@ -362,10 +359,11 @@
 }
 #m-section3 .tab-content {
   float: left;
-  display: none;
   width: 100%;
+  position: absolute;
+  display: none;
 }
-#m-section3 .tab-content.active {
+#m-section3 .tab-content.active{
   display: block;
 }
 #m-section3 .tab-content {

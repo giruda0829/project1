@@ -1302,32 +1302,18 @@
         <div id="h-slider">
           <div class="h-banner-slider">
             <ul class="slider">
-              <li>
-                <div class="img1 image">
-                  <img
-                    src="./img/header/20210326182433940.jpg"
-                    alt=""
-                    style="
-                      background-repeat: no-repeat;
-                      background-position: center center;
-                      background-size: cover;
-                    "
-                  />
-                </div>
-              </li>
-              <li>
-                <div class="img2 image"></div>
-              </li>
-              <li>
-                <div class="img3 image"></div>
-              </li>
+              <li style="background: url('./img/header/20210326182433940.jpg') center center / cover no-repeat;" class="active"></li>
+              <li style="background: url('./img/header/20210809142311437.jpg') center center / cover no-repeat;"></li>
+              <li style="background: url('./img/header/20210326182404980.jpg') center center / cover no-repeat;"></li>
             </ul>
+            <div class="btn inner">
+              <button class="prev"></button>
+              <button class="next"></button>
+            </div>
           </div>
           <script>
-            $(".slider").slick({
-              slidesToShow: 1,
-              slidesToScroll: 1
-            });
+            const image=document.querySelectorAll('.slider>li')
+            const btn=document.querySelectorAll('.btn>button')
           </script>
         </div>
         <!-- //#h-banner -->
@@ -1339,7 +1325,7 @@
             <div>
               <div class="m-c1-1 pr">
                 <h2 class="tab-tit notice fl">
-                  <a href="#m-section1" class="active">공지사항</a>
+                  <a href="#notice" class="active">공지사항</a>
                 </h2>
                 <div id="notice" class="m-c1-1-area active">
                   <ul class="news">
@@ -1423,7 +1409,7 @@
                   </ul>
                 </div>
                 <h2 class="tab-tit tender fl">
-                  <a href="#m-section1">입찰공고</a>
+                  <a href="#tender">입찰공고</a>
                 </h2>
                 <div id="tender" class="m-c1-1-area">
                   <ul class="news">
@@ -1501,7 +1487,7 @@
                   </ul>
                 </div>
                 <h2 class="tab-tit recruit fl">
-                  <a href="#m-section1">채용공고</a>
+                  <a href="#recruit">채용공고</a>
                 </h2>
                 <div id="recruit" class="m-c1-1-area">
                   <ul class="news">
@@ -1587,7 +1573,7 @@
                   </ul>
                 </div>
                 <h2 class="tab-tit task fl">
-                  <a href="#m-section1">과제공모</a>
+                  <a href="#task">과제공모</a>
                 </h2>
                 <div id="task" class="m-c1-1-area">
                   <ul class="news">
@@ -1846,50 +1832,50 @@
         <div id="m-section3">
           <div class="inner">
             <div class="publication-area">
-              <h2 class="tab-tit briefs">
-                <a href="#m-section3" class="active">브리프</a>
+              <h2 class="tab-tit">
+                <a href="#publication1" class="active briefs">브리프</a>
               </h2>
               <div id="publication1" class="tab-content cf active">
                 <nav>
                   <ul class="publication-nav fl">
-                    <li class="all">
-                      <a href="#m-section3" class="active">
+                    <li>
+                      <a href="#publication1-1" class="active">
                         전체
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li class="issue">
-                      <a href="#m-section3">
+                    <li>
+                      <a href="#publication1-2">
                         이슈페이퍼
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li class="policy">
-                      <a href="#m-section3">
+                    <li>
+                      <a href="#publication1-3">
                         정책브리프
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li class="statis">
-                      <a href="#m-section3">
+                    <li>
+                      <a href="#publication1-4">
                         통계브리프
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li class="technology">
-                      <a href="#m-section3">
+                    <li>
+                      <a href="#publication1-5">
                         기술동향브리프
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li class="Apple">
-                      <a href="#m-section3">
+                    <li>
+                      <a href="#publication1-6">
                         사과플러스
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li class="future">
-                      <a href="#m-section3">
+                    <li>
+                      <a href="#publication1-7">
                         미래예측브리프
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
@@ -2289,32 +2275,32 @@
                   </ul>
                 </div>
               </div>
-              <h2 class="tab-tit publication">
-                <a href="#m-section3">간행물</a>
+              <h2 class="tab-tit">
+                <a href="#publication2" class="publication">간행물</a>
               </h2>
               <div id="publication2" class="tab-content cf">
                 <nav>
                   <ul class="publication-nav fl">
-                    <li class="all">
-                      <a href="#m-section3" class="active">
+                    <li>
+                      <a href="#publication2-1" class="all">
                         전체
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li class="newsletter">
-                      <a href="#m-section3">
+                    <li>
+                      <a href="#publication2-2">
                         뉴스레터
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li class="annual">
-                      <a href="#m-section3">
+                    <li>
+                      <a href="#publication2-3">
                         연차보고서
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li class="lnl">
-                      <a href="#m-section3">
+                    <li>
+                      <a href="#publication2-4">
                         KISTEP lnl
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
@@ -2526,50 +2512,50 @@
                   </ul>
                 </div>
               </div>
-              <h2 class="tab-tit report">
-                <a href="#m-section3">보고서</a>
+              <h2 class="tab-tit">
+                <a href="#publication3" class="report">보고서</a>
               </h2>
               <div id="publication3" class="tab-content cf">
                 <nav>
                   <ul class="publication-nav fl">
-                    <li class="all">
-                      <a href="#m-section3" class="active">
+                    <li>
+                      <a href="#publication3-1" class="all">
                         전체
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li class="prediction">
-                      <a href="#m-section3">
+                    <li>
+                      <a href="#publication3-2">
                         미래예측
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li class="planning">
-                      <a href="#m-section3">
+                    <li>
+                      <a href="#publication3-3">
                         정책기획
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li class="business">
-                      <a href="#m-section3">
+                    <li>
+                      <a href="#publication3-4">
                         사업조정
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li class="result">
-                      <a href="#m-section3">
+                    <li>
+                      <a href="#publication3-5">
                         성과확산
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li class="evaluation">
-                      <a href="#m-section3">
+                    <li>
+                      <a href="#publication3-6">
                         조사·평가
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
                     </li>
-                    <li class="feasibility">
-                      <a href="#m-section3">
+                    <li>
+                      <a href="#publication3-7">
                         예비타당성
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
@@ -3262,5 +3248,11 @@
       >
     </div>
     <script src="./java/topbtn.js"></script>
+    <script src="./java/detectmobilebrowser.js"></script>
+    <script>
+      if(jQuery.browser.mobile==true){
+        location.href="./mobile/"
+      }
+    </script>
   </body>
 </html>

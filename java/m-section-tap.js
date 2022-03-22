@@ -1,55 +1,18 @@
-$(document).ready(function () {
+const tabContent = document.querySelectorAll(".m-c1-1>div");
+const targetLink = document.querySelectorAll(".m-c1-1>.tab-tit a");
 
-$(".notice").click(function(){
-    $("#notice").addClass('active')
-    $("#tender").removeClass('active')
-    $("#recruit").removeClass('active')
-    $("#task").removeClass('active')
+for (let i = 0; i < targetLink.length; i++) {
+  targetLink[i].addEventListener("click", (e) => {
+    e.preventDefault();
+    for (let j = 0; j < targetLink.length; j++) {
+      targetLink[j].classList.remove("active");
+      e.target.classList.add("active");
+    }
+    let ogrTarget = e.target.getAttribute("href");
+    for (let x = 0; x < tabContent.length; x++) {
+      tabContent[x].style.display = "none";
+    }
+    document.querySelector(ogrTarget).style.display = "block";
   });
-  $(".tender").click(function(){
-    $("#notice").removeClass('active')
-    $("#tender").addClass('active')
-    $("#recruit").removeClass('active')
-    $("#task").removeClass('active')
-  });
-  $(".recruit").click(function(){
-    $("#notice").removeClass('active')
-    $("#tender").removeClass('active')
-    $("#recruit").addClass('active')
-    $("#task").removeClass('active')
-  });
-  $(".task").click(function(){
-    $("#notice").removeClass('active')
-    $("#tender").removeClass('active')
-    $("#recruit").removeClass('active')
-    $("#task").addClass('active')
-  });
-});
-
-$(document).ready(function () {
-
-$(".notice").click(function(){
-    $(".notice a").addClass('active')
-    $(".tender a").removeClass('active')
-    $(".recruit a").removeClass('active')
-    $(".task a").removeClass('active')
-  });
-  $(".tender").click(function(){
-    $(".notice a").removeClass('active')
-    $(".tender a").addClass('active')
-    $(".recruit a").removeClass('active')
-    $(".task a").removeClass('active')
-  });
-  $(".recruit").click(function(){
-    $(".notice a").removeClass('active')
-    $(".tender a").removeClass('active')
-    $(".recruit a").addClass('active')
-    $(".task a").removeClass('active')
-  });
-  $(".task").click(function(){
-    $(".notice a").removeClass('active')
-    $(".tender a").removeClass('active')
-    $(".recruit a").removeClass('active')
-    $(".task a").addClass('active')
-  });
-});
+  document.querySelector("#notice").style.display = "block";
+}

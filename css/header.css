@@ -197,7 +197,7 @@
 #h-banner .h-banner-text {
   width: 50%;
   height: 200px;
-  margin-top: 80px;
+  margin-top: 60px;
   color: #fff;
   text-align: left;
 }
@@ -213,13 +213,13 @@
 }
 #h-banner .h-banner-text h2 {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 8px;
   display: block;
 }
 #h-banner .h-banner-text p {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -360,12 +360,18 @@
 /* h-banner-btn */
 #h-slider{
   position: absolute;
-  top: -60px;
-  left: 0;
-  z-index: -99;
+  top: 0px;
+  /* background-color: #000; */
+  height: 100%;
+  width: 100%;
 }
-#h-slider .slick-next,
-#h-slider .slick-prev {
+#h-slider .btn{
+  position: relative;
+  top: 465px;
+  margin: 0 auto;
+}
+#h-slider .next,
+#h-slider .prev {
   font-family: "FontAwesome";
   width: 60px;
   height: 60px;
@@ -374,20 +380,15 @@
   position: relative;
   background-color: transparent;
 }
-#h-slider .slick-prev{
-  top: 500px;
-  left: 70px;
+#h-slider .prev{
+  top: 0;
 }
-#h-slider .slick-next{
-  top: 440px;
-  left: 140px;
+#h-slider .next{
+  top: 0;
+  margin-left: 12px;
 }
-#h-slider .slick-prev::before,
-#h-slider .slick-next::before{
-  content: '';
-}
-#h-slider .slick-prev::after,
-#h-slider .slick-next::after{
+#h-slider .prev::after,
+#h-slider .next::after{
   line-height: 60px;
   color: #fff;
   font-size: 16px;
@@ -397,25 +398,37 @@
   left: 50%;
   transform: translate(-50%,-50%);
 }
-#h-slider .slick-prev::after{
+#h-slider .prev::after{
   content: "\f053";
 }
-#h-slider .slick-next::after{
+#h-slider .next::after{
   content: "\f054";
 }
-#h-slider .slick-next:hover,
-#h-slider .slick-next.active {
+#h-slider .next:hover,
+#h-slider .next.active {
   background-color: #fff;
 }
-#h-slider .slick-prev:hover,
-#h-slider .slick-prev.active {
+#h-slider .prev:hover,
+#h-slider .prev.active {
   background-color: #fff;
 }
 
 /* h-banner-slider */
-.h-banner-slider .slider {
+#h-slider .h-banner-slider .slider{
   list-style: none;
+  height: 100%;
+  width: 100%;
 }
-.h-banner-slider .slider div.image{
-  height: 645px;
+#h-slider .h-banner-slider .slider li{
+  height: calc(100% + 35px);
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  z-index: -50;
+  opacity: 0;
+  transition: .5s;
+}
+#h-slider .h-banner-slider .slider li.active{
+  opacity: 1;
 }
