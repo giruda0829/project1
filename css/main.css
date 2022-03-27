@@ -84,6 +84,9 @@
   transition: all .5s;
   display: none;
 }
+#m-section1 .m-c1-1-area.active{
+  display: block;
+}
 #m-section1 .tab-tit {
   position: relative;
   display: inline-block;
@@ -198,6 +201,7 @@
   height: 385px;
   text-align: left;
   margin: 0 5px;
+  overflow: hidden;
 }
 #m-section1 .m-c1-2 ul li a {
   display: block;
@@ -238,6 +242,42 @@
   font-size: 17px;
   font-weight: 700;
 }
+#m-section1 .m-c1-2 .bx-prev,
+#m-section1 .m-c1-2 .bx-next{
+  position: absolute;
+  bottom: 10px;
+}
+#m-section1 .m-c1-2 .bx-prev{
+  right: 120px;
+}
+#m-section1 .m-c1-2 .bx-next{
+  right: 90px;
+}
+#m-section1 .m-c1-2 .counter-box{
+  position: absolute;
+  bottom: 10px;
+  right: 25%;
+}
+#m-section1 .m-c1-2 .counter{
+  position: absolute;
+  bottom:0;
+  left: -12px;
+}
+#m-section1 .bx-start,
+#m-section1 .bx-stop{
+  font-family: 'FontAwesome';
+  border: 0;
+  background: none;
+  font-size: 12px;
+  position: absolute;
+  bottom: 14px;
+  right: 40px;
+  cursor: pointer;
+}
+#m-section1 .bx-start{
+  right: 60px;
+}
+
 
 /* #m-section2 */
 #m-section2 {
