@@ -1,22 +1,2591 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+  <head>
+    <title>KISTEP 한국과학기술기획평가원</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png"/>
+    <link rel="manifest" href="./favicon/manifest.json"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <!-- //favicon -->
+
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mobile</title>
-    <style>
-        body{background: #ddd;}
-    </style>
-</head>
-<body>
-    <h1>mobile</h1>
-    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
-    <script src="../java/detectmobilebrowser.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/submenu.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <!-- jq코어 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- 적응형 -->
+    <script src="java/detectmobilebrowser.js"></script>
     <script>
-      if(jQuery.browser.mobile==false){
-        location.href="../"
+      if(jQuery.browser.mobile==true){
+        location.href="./mobile/"
       }
     </script>
-</body>
+
+    <!-- bx_slide 플러그인 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+
+    <!-- jq -->
+    <script src="jq/submenu.js"></script>
+    <script src="jq/slide_bx.js"></script>
+    <script src="jq/section3_slide.js"></script>
+    <script src="jq/slide-script.js"></script>
+    <script src="jq/topbtn.js"></script>
+    <script src="jq/footer-menu.js"></script>
+
+    <!-- js -->
+    <script src="js/m-section-tap.js"></script>
+  </head>
+  <body>
+    <div id="skip-menu">
+      <a href="#wrap">가장 위로가기</a>
+      <a href="#h-banner">메인컨텐츠 바로가기</a>
+      <a href="#m-section1">공지사항 바로가기</a>
+      <a href="#m-section2">포럼 및 행사 바로가기</a>
+      <a href="#m-section3">브리프 바로가기</a>
+      <a href="#m-section4"><span lang="en">KISTEP</span>소개 바로가기</a>
+      <a href="#foot-banner">관련 사이트 바로가기</a>
+      <a href="#footer">가장 아래로가기</a>
+    </div>
+    <div id="wrap">
+      <header id="header">
+        <div id="h-slider">
+          <div class="h-banner-slider">
+            <ul class="sliders">
+              <li class="img img1"></li>
+              <li class="img img2"></li>
+              <li class="img img3"></li>
+            </ul>
+          </div>
+          <div class="button">
+            <div class="inner">
+              <div class="btn">
+                <div class="h-prev"></div>
+                <div class="h-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //#h-slider -->
+        <div id="gnb">
+          <div id="h-top">
+            <div class="inner">
+              <div class="h-top-searchbar fl">
+                <form id="searshform" name="searchbar">
+                  <input
+                    type="text"
+                    title="검색어 입력"
+                    placeholder="검색어를 입력하세요"
+                    class="searchkeyword"
+                    name="searchkeyword"
+                    value
+                  />
+                  <button type="submit" name="button" class="btn">
+                    <i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+              </div>
+              <!-- //.h-top-searchbar -->
+              <div class="h-top-lang fr">
+                <a
+                  href="index.html"
+                  title="한글 홈페이지로 이동합니다"
+                  class="ko"
+                  >KR</a
+                >
+                <input type="checkbox" name="lang" id="lang" />
+                <label for="lang"
+                  ><i class="fa-solid fa-caret-down up"></i
+                ></label>
+                <a
+                  href="index.html"
+                  title="영어 홈페이지로 이동합니다"
+                  class="en"
+                  >EN</a
+                >
+              </div>
+              <!-- //.h-top-lang -->
+            </div>
+          </div>
+          <!-- //#h-top -->
+          <div id="h-nav">
+            <div class="inner">
+              <h1 class="h-nav-logo fl cf">
+                <a href="index.html"
+                  ><img
+                    src="./img/logo_whiht.png"
+                    alt="KISTEP 한국과학기술기획평가원의 로고입니다"
+                    title="KISTEP 한국과학기술기획평가원" class="main active"
+                /></a>
+                <a href="index.html"
+                  ><img
+                    src="./img/logo.png"
+                    alt="KISTEP 한국과학기술기획평가원의 로고입니다"
+                    title="KISTEP 한국과학기술기획평가원" class="hover"
+                /></a>
+              </h1>
+              <!-- //.h-nav-menu -->
+              <div class="h-nav-btn fr">
+                <span class="sr_only">사이트맵 열기</span>
+                <div class="btn"></div>
+              </div>
+              <!-- //.h-nav-btn -->
+            </div>
+            <div id="menu-open">
+              <div class="map-nav inner">
+                <h2 class="tit fl"><span>SITEMAP</span></h2>
+                <nav>
+                  <ul class="open-manu-all">
+                    <li class="lnb1 open01">
+                      <a href="./project1_form.html" class="depth1">정보공개</a>
+                      <div class="open-menu">
+                        <ul>
+                          <li>
+                            <a href="#" class="depth2">정보공개제도</a>
+                            <div>
+                              <ul class="sub01 lnb-detail">
+                                <li class="sub01-1-1">
+                                  <a href="#">정보공개제도 안내</a>
+                                </li>
+                                <li class="sub01-1-2">
+                                  <a href="#">정보공개청구</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">사전정보공표</a>
+                            <div>
+                              <ul class="sub02 lnb-detail">
+                                <li class="sub01-2-1">
+                                  <a href="#">연구사업분야</a>
+                                </li>
+                                <li class="sub01-2-2">
+                                  <a href="#">행정지원분야</a>
+                                </li>
+                                <li class="sub01-2-3">
+                                  <a href="#">즐겨찾기 정보</a>
+                                </li>
+                                <li class="sub01-2-4">
+                                  <a href="#">사전정보Q&A</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">공공데이터 개방</a>
+                            <div>
+                              <ul class="sub01 lnb-detail">
+                                <li class="sub01-3-1">
+                                  <a href="#">공공데이터 개방안내</a>
+                                </li>
+                                <li class="sub01-3-2">
+                                  <a href="#">공공데이터 제공목록</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">청렴정보공개</a>
+                            <div>
+                              <ul class="sub01 lnb-detail">
+                                <li class="sub01-4-1">
+                                  <a href="#">감사 사례 및 결과</a>
+                                </li>
+                                <li class="sub01-4-2">
+                                  <a href="#">반부패·청렴</a>
+                                </li>
+                                <li class="sub01-4-3">
+                                  <a href="#">부패행위 현황 공개</a>
+                                </li>
+                                <li class="sub01-4-4">
+                                  <a href="#">내부규정</a>
+                                </li>
+                                <li class="sub01-4-5">
+                                  <a href="#">업무추진비현황</a>
+                                </li>
+                                <li class="sub01-4-6">
+                                  <a href="#">수의계약현황</a>
+                                </li>
+                                <li class="sub01-4-7">
+                                  <a href="#">친인척 채용현황</a>
+                                </li>
+                                <li class="sub01-4-8">
+                                  <a href="#">공용차량 운영현황</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">경영공시</a>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">사업실명제</a>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">시설자원개방</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="lnb1 open02">
+                      <a href="#" class="depth1">홍보관</a>
+                      <div class="open-menu">
+                        <ul>
+                          <li>
+                            <a href="#" class="depth2">홍보자료실</a>
+                            <div>
+                              <ul class="sub02 lnb-detail">
+                                <li class="sub02-1-1">
+                                  <a href="#">CI소개</a>
+                                </li>
+                                <li class="sub02-1-2">
+                                  <a href="#">브로슈어</a>
+                                </li>
+                                <li class="sub02-1-3">
+                                  <a href="#">보도자료</a>
+                                </li>
+                                <li class="sub02-1-4">
+                                  <a href="#">언론기사</a>
+                                </li>
+                                <li class="sub02-1-5">
+                                  <a href="#">홍보영상</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">포럼 및 행사</a>
+                            <div>
+                              <ul class="sub02 lnb-detail">
+                                <li class="sub02-2-1">
+                                  <a href="#">최신동정</a>
+                                </li>
+                                <li class="sub02-2-2">
+                                  <a href="#">KISTEP 수요포럼</a>
+                                </li>
+                                <li class="sub02-2-3">
+                                  <a href="#">R&D 부처합동 설명회</a>
+                                </li>
+                                <li class="sub02-2-4">
+                                  <a href="#">주관 행사</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">KISTEP 간행물</a>
+                            <div>
+                              <ul class="sub02 lnb-detail">
+                                <li class="sub02-3-1">
+                                  <a href="#">전체간행물</a>
+                                </li>
+                                <li class="sub02-3-2">
+                                  <a href="#">뉴스레터</a>
+                                </li>
+                                <li class="sub02-3-3">
+                                  <a href="#">연차보고서</a>
+                                </li>
+                                <li class="sub02-3-4">
+                                  <a href="#">KISTEP lnl</a>
+                                </li>
+                                <li class="sub02-3-5">
+                                  <a href="#">Asian Research Policy</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="lnb1 open03">
+                      <a href="#" class="depth1">주요 사업</a>
+                      <div class="open-menu">
+                        <ul>
+                          <li>
+                            <a href="#" class="depth2">주요역할</a>
+                            <div>
+                              <ul class="sub03 lnb-detail">
+                                <li class="sub03-1-1">
+                                  <a href="#">4대 주요 임무</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">연구보고서</a>
+                            <div>
+                              <ul class="sub03 lnb-detail">
+                                <li class="sub03-2-1">
+                                  <a href="#">미래예측</a>
+                                </li>
+                                <li class="sub03-2-2">
+                                  <a href="#">정책기획</a>
+                                </li>
+                                <li class="sub03-2-3">
+                                  <a href="#">사업조정</a>
+                                </li>
+                                <li class="sub03-2-4">
+                                  <a href="#">성과확산</a>
+                                </li>
+                                <li class="sub03-2-5">
+                                  <a href="#">조사·평가</a>
+                                </li>
+                                <li class="sub03-2-6">
+                                  <a href="#">예비타당성</a>
+                                </li>
+                                <li class="sub03-2-7">
+                                  <a href="#">기타연구자료</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">KISTEP 브리프</a>
+                            <div>
+                              <ul class="sub03 lnb-detail">
+                                <li class="sub03-3-1">
+                                  <a href="#">전체브리프</a>
+                                </li>
+                                <li class="sub03-3-2">
+                                  <a href="#">이슈페이퍼</a>
+                                </li>
+                                <li class="sub03-3-3">
+                                  <a href="#">정책브리프</a>
+                                </li>
+                                <li class="sub03-3-4">
+                                  <a href="#">통계브리프</a>
+                                </li>
+                                <li class="sub03-3-5">
+                                  <a href="#">기술동향브리프</a>
+                                </li>
+                                <li class="sub03-3-6">
+                                  <a href="#">사과플러스</a>
+                                </li>
+                                <li class="sub03-3-7">
+                                  <a href="#">미래예측브리프</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="lnb1 open04">
+                      <a href="project1_form.html" class="depth1">알림·소식</a>
+                      <div class="open-menu">
+                        <ul>
+                          <li>
+                            <a href="project1_form.html" class="depth2"
+                              >공지사항</a
+                            >
+                          </li>
+                          <li><a href="#" class="depth2">입찰공고</a></li>
+                          <li><a href="#" class="depth2">연구과제공모</a></li>
+                          <li>
+                            <a href="#" class="depth2">채용정보</a>
+                            <div>
+                              <ul class="sub04 lnb-detail">
+                                <li class="sub04-4-1">
+                                  <a href="#">채용안내</a>
+                                </li>
+                                <li class="sub04-4-2">
+                                  <a href="#">채용공고</a>
+                                </li>
+                                <li class="sub04-4-3">
+                                  <a href="#">제증명발급안내</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="lnb1 open05">
+                      <a href="#" class="depth1">국민참여</a>
+                      <div class="open-menu">
+                        <ul>
+                          <li>
+                            <a href="#" class="depth2">고객헌장</a>
+                            <div>
+                              <ul class="sub05 lnb-detail">
+                                <li class="sub05-1-1">
+                                  <a href="#">고객헌장 전문</a>
+                                </li>
+                                <li class="sub05-1-2">
+                                  <a href="#">핵심 서비스 이행 표준</a>
+                                </li>
+                                <li class="sub05-1-3">
+                                  <a href="#">고객 서비스 이행 표준</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">인쇄물출입업체등록</a>
+                            <div>
+                              <ul class="sub05 lnb-detail">
+                                <li class="sub05-2-1">
+                                  <a href="#">인쇄물출입업체 등록안내</a>
+                                </li>
+                                <li class="sub05-2-2">
+                                  <a href="#">인쇄물출입업체 계약현황</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">신고센터</a>
+                            <div>
+                              <ul class="sub05 lnb-detail">
+                                <li class="sub05-3-1">
+                                  <a href="#">부조리 신고</a>
+                                </li>
+                                <li class="sub05-3-2">
+                                  <a href="#">예산낭비 신고</a>
+                                </li>
+                                <li class="sub05-3-3">
+                                  <a href="#">공익·복지부정 신고</a>
+                                </li>
+                                <li class="sub05-3-4">
+                                  <a href="#">홈페이지 불편사항</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">자주묻는질문(FAQ)</a>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">묻고답하기</a>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">추천사이트</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="lnb1 open06">
+                      <a href="#" class="depth1">기관소개</a>
+                      <div class="open-menu">
+                        <ul>
+                          <li>
+                            <a href="#" class="depth2">원장 소개</a>
+                            <div>
+                              <ul class="sub06 lnb-detail">
+                                <li class="sub06-1-1">
+                                  <a href="#">원장인사말</a>
+                                </li>
+                                <li class="sub06-1-2">
+                                  <a href="#">역대원장</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">미래비전</a>
+                            <div>
+                              <ul class="sub06 lnb-detail">
+                                <li class="sub06-2-1">
+                                  <a href="#">미션 및 추진전략</a>
+                                </li>
+                                <li class="sub06-2-2">
+                                  <a href="#">R&R 2.0</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">연혁</a>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">조직 및 직원</a>
+                            <div>
+                              <ul class="sub06 lnb-detail">
+                                <li class="sub06-4-1">
+                                  <a href="#">조직도</a>
+                                </li>
+                                <li class="sub06-4-2">
+                                  <a href="#">직원검색</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">협력기관</a>
+                            <div>
+                              <ul class="sub06 lnb-detail">
+                                <li class="sub06-5-1">
+                                  <a href="#">국내 협력기관</a>
+                                </li>
+                                <li class="sub06-5-2">
+                                  <a href="#">국외 협력기관</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="#" class="depth2">찾아오시는길</a>
+                            <div>
+                              <ul class="sub06 lnb-detail">
+                                <li class="sub06-6-1">
+                                  <a href="#">사전 방문 등록</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <!-- //#menu-open -->
+          </div>
+          <!-- //#h-nav -->
+        </div>
+        <!-- //#gnb -->
+        <div id="h-banner">
+          <div class="inner">
+            <div class="h-banner-text fl cf">
+              <div class="title">
+                <h2>과학기술 혁신정책</h2>
+                <h1>Think-Tank</h1>
+              </div>
+              <p>
+                KISTEP은 과학기술과 사람, 사회를 연결하여 국민 삶의 질을
+                높이고 국가경쟁력 강화에 기여하기 위해 최선을 다하고 있습니다.
+              </p>
+            </div>
+            <div class="h-banner-content fr">
+              <ul class="h-content-slide">
+                <li>
+                  <a href="#" class="txtbox">
+                    <strong class="tit"
+                      >2022년도 정부R&D사업 온라인 부처합동 설명회 개최</strong
+                    >
+                    <span class="txt"
+                      >2022년도 정부R&D 예산의 세부적인 내용인 연구개발사업의
+                      주요 내용과 세부 추진계획을 안내하는 자리가 마련됐다.
+                      과학기술정보통신..</span
+                    >
+                    <span class="more">자세히 보기</span>
+                  </a>
+                  <a href="#" class="imgbox">
+                    <img
+                      src="./img/header/content1.png"
+                      alt="2022년도 정부R&D사업 온라인 부처합동 설명회 개최"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="txtbox">
+                    <strong class="tit"
+                      >이경수 과학기술혁신본부장 KISTEP 방원</strong
+                    >
+                    <span class="txt"
+                      >과학기술정보통신부 이경수 과학기술혁신본부장이 1월
+                      14일(금) 한국과학기술기획평가원(KISTEP, 원장 정병선)을
+                      찾아 기관의 주요 현황을 ..</span
+                    >
+                    <span class="more">자세히 보기</span>
+                  </a>
+                  <a href="#" class="imgbox">
+                    <img
+                      src="./img/header/content2.jpg"
+                      alt="이경수 과학기술혁신본부장 KISTEP 방원"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="txtbox">
+                    <strong class="tit"
+                      >범부처 통합연구지원시스템(IRIS) 개통식 개최</strong
+                    >
+                    <span class="txt"
+                      >연구자 중심의 연구환경 조성을 위한 범부처
+                      통합연구시스템(Integrated Research Information System;
+                      IRIS, 이하 IRIS)이 본격 개통된다...</span
+                    >
+                    <span class="more">자세히 보기</span>
+                  </a>
+                  <a href="#" class="imgbox">
+                    <img
+                      src="./img/header/content3.jpg"
+                      alt="2022년도 정부R&D사업 온라인 부처합동 설명회 개최"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="txtbox">
+                    <strong class="tit"
+                      >23년도 국가연구개발 투자방향 온라인 공청회 개최</strong
+                    >
+                    <span class="txt"
+                      >과학기술정보통신부(이하 과기정통부)가 주최하고
+                      한국과학기술기획평가원(이하 KISTEP)이 주관하는 ‘2023년도
+                      국가연구개발 투자방향..</span
+                    >
+                    <span class="more">자세히 보기</span>
+                  </a>
+                  <a href="#" class="imgbox">
+                    <img
+                      src="./img/header/content4.jpg"
+                      alt="2022년도 정부R&D사업 온라인 부처합동 설명회 개최"
+                    />
+                  </a>
+                </li>
+              </ul>
+              <div class="btn">
+                <div class="prev"></div>
+                <div class="next"></div>
+              </div>
+              <div class="controls-auto">
+                <button class="slide-start" type="button"></button>
+                <button class="slide-stop active" type="button"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //#h-banner -->
+      </header>
+      <!-- //#header -->
+      <div id="main">
+        <div id="m-section1">
+          <div class="inner">
+            <div>
+              <div class="m-c1-1 pr">
+                <h2 class="tab-tit notice fl">
+                  <a href="#notice" class="active">공지사항</a>
+                </h2>
+                <div id="notice" class="m-c1-1-area active">
+                  <ul class="news">
+                    <li>
+                      <a href="./project1_form.html">
+                        <div class="tit">
+                          <i class="fa-solid fa-circle-n"></i>
+                          <strong> 2022년도 연구지원체계평가 안내</strong>
+                        </div>
+                        <div class="txt">
+                          <span
+                            >과학기술정보통신부 공고 제2022–0283호 2022년도
+                            연구지원체계평가 안내 『2022년도
+                            연구지원체계평가』를 다음과 같이
+                            실시할전망이다.</span
+                          >
+                        </div>
+                      </a>
+                      <span class="date">
+                        2022.03.
+                        <span>10</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt"
+                        >정보보안과 개인정보보호 습관화 홍보 배너 게시</a
+                      >
+                      <span class="date">
+                        2022.02.
+                        <span>24</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt"
+                        >[초청]「2023년도 국가연구개발 투자방향 및
+                        기준(안)」온라인 공..</a
+                      >
+                      <span class="date">
+                        2022.02.
+                        <span>21</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        2021년도 산하기관 부패방지 시책평가 결과 안내
+                      </a>
+                      <span class="date">
+                        2021.12.
+                        <span>27</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [안내] 2022년 KISTEP 연구주제,아이디어 수요조사 - 우수
+                        제안 ..
+                      </a>
+                      <span class="date">
+                        2021.12.
+                        <span>27</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        공공기관 고객만족도 조사 실시 안내
+                      </a>
+                      <span class="date">
+                        2021.11.
+                        <span>24</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [설문] 2022년 과학기술혁신정책 연구주제 및 아이디어
+                        수요조사..
+                      </a>
+                      <span class="date">
+                        2021.11.
+                        <span>22</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="tab-tit tender fl">
+                  <a href="#tender">입찰공고</a>
+                </h2>
+                <div id="tender" class="m-c1-1-area">
+                  <ul class="news">
+                    <li>
+                      <a href="./project1_form.html">
+                        <div class="tit">
+                          <i class="fa-solid fa-circle-n"></i>
+                          <strong
+                            >[본공고] 국가 R&D 기획관리 지원서비스 구축</strong
+                          >
+                        </div>
+                        <div class="txt">
+                          <span>2022-04-06 10:00:00</span>
+                        </div>
+                      </a>
+                      <span class="date">
+                        2022.04
+                        <span>06</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [사전공고] 2022년 1차 수시 사업타당성조사 비용분석
+                      </a>
+                      <span class="date">
+                        2022.03.
+                        <span>20</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [사전공고] 핵심기술별 등록특허 DB구축과 기술경쟁력 분석
+                      </a>
+                      <span class="date">
+                        2022.03.
+                        <span>20</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [사전공고] 2022년 한국과학기술기획평가원 직원 건강검진
+                      </a>
+                      <span class="date">
+                        2022.03.
+                        <span>19</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [사전공고] 국가 R&D 기획관리 지원서비스 구축
+                      </a>
+                      <span class="date">
+                        2022.03.
+                        <span>16</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [본공고] 2022년도 KISTEP InI 발간
+                      </a>
+                      <span class="date">
+                        2022.03.
+                        <span>04</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [사전공고] 2022년도 KISTEP InI 발간
+                      </a>
+                      <span class="date">
+                        2022.02.
+                        <span>19</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="tab-tit recruit fl">
+                  <a href="#recruit">채용공고</a>
+                </h2>
+                <div id="recruit" class="m-c1-1-area">
+                  <ul class="news">
+                    <li>
+                      <a href="./project1_form.html">
+                        <div class="tit">
+                          <i class="fa-solid fa-circle-n"></i>
+                          <strong>
+                            사업조정본부 거대공공사업센터 육아휴직 대체인력 채용
+                            3차공고</strong
+                          >
+                        </div>
+                        <div class="txt">
+                          <span
+                            >한국과학기술기획평가원 거대공공사업센터 육아휴직
+                            대체인력 채용 공고 한국과학기술기획평가원 채용은
+                            직무능력중심 블라..</span
+                          >
+                        </div>
+                      </a>
+                      <span class="date">
+                        2022.03.
+                        <span>14</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        한국과학기술기획평가원 지역정책팀 육아휴직 대체인력 채용
+                        공고
+                      </a>
+                      <span class="date">
+                        2022.02.
+                        <span>11</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        사업조정본부 거대공공사업센터 육아휴직 대체인력 채용
+                        재공고
+                      </a>
+                      <span class="date">
+                        2022.02.
+                        <span>09</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        사업조정본부 거대공공사업센터 육아휴직 대체인력 채용
+                        재공고
+                      </a>
+                      <span class="date">
+                        2022.01.
+                        <span>05</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        제2022-1회 한국과학기술기획평가원 정규직 공개채용
+                      </a>
+                      <span class="date">
+                        2021.12.
+                        <span>09</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        사업조정본부 거대공공사업센터 육아대체인력 채용 공고
+                      </a>
+                      <span class="date">
+                        2021.11.
+                        <span>02</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        제2022-1회 한국과학기술기획평가원 위촉연구원 공개채용
+                      </a>
+                      <span class="date">
+                        2021.11.
+                        <span>01</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="tab-tit task fl">
+                  <a href="#task">과제공모</a>
+                </h2>
+                <div id="task" class="m-c1-1-area">
+                  <ul class="news">
+                    <li>
+                      <a href="./project1_form.html">
+                        <div class="tit">
+                          <i class="fa-solid fa-circle-n"></i>
+                          <strong
+                            >2022년 KISTEP 주요사업 위탁연구과제 공모(공모명 :
+                            핵심기술별..</strong
+                          >
+                        </div>
+                        <div class="txt">
+                          <span
+                            >2022년 KISTEP 위탁연구과제 공모
+                            한국과학기술기획평가원(KISTEP)에서는 2022년
+                            기관고유사업으로 추진할 위탁연구 과제를 아..</span
+                          >
+                        </div>
+                      </a>
+                      <span class="date">
+                        2022.03.
+                        <span>04</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [재공고] 2021년도 혁신도전 프로젝트 사업 연구기획과제
+                        재공모..
+                      </a>
+                      <span class="date">
+                        2022.02.
+                        <span>24</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [공모] 2022년도 과학기술혁신정책지원사업 연구과제 공모
+                      </a>
+                      <span class="date">
+                        2022.02.
+                        <span>25</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [공고] 2021년도 혁신도전 프로젝트 사업 연구기획과제
+                        공모(제4..
+                      </a>
+                      <span class="date">
+                        2022.01.
+                        <span>26</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [재공고] 2021년도 혁신도전 프로젝트 사업 연구기획과제
+                        재공모..
+                      </a>
+                      <span class="date">
+                        2021.10.
+                        <span>15</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [공고] 2021년도 혁신도전 프로젝트 사업 연구기획과제
+                        공모(제3..
+                      </a>
+                      <span class="date">
+                        2021.09.
+                        <span>15</span>
+                      </span>
+                    </li>
+                    <li>
+                      <a href="./project1_form.html" class="txt">
+                        [재공모] 2021년도 과학기술혁신정책지원사업 연구과제
+                        재공모(2..
+                      </a>
+                      <span class="date">
+                        2021.08.
+                        <span>13</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <a href="./project1_form.html" class="more">
+                  <i class="fa-thin fa-plus"></i>
+                </a>
+              </div>
+              <!-- //.m-c1-1 -->
+              <div class="m-c1-2">
+                <ul class="m-c1-2-slider">
+                  <li>
+                    <a href="./project1_form.html">
+                      <span class="img">
+                        <img
+                          src="./img/con1/con1-1.jpg"
+                          alt="인쇄물출입업체등록안내"
+                        />
+                      </span>
+                      <strong class="tit">인쇄물출입업체등록안내</strong>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./project1_form.html">
+                      <span class="img">
+                        <img
+                          src="./img/con1/con1-2.jpg"
+                          alt="인쇄물출입업체등록안내"
+                        />
+                      </span>
+                      <strong class="tit">홈페이지 불편사항 신고</strong>
+                    </a>
+                  </li>
+                </ul>
+                <p class="total-count">
+                  총
+                  <span class="count-txt">
+                    <span class="count">2</span>
+                    개의 팝업
+                  </span>
+                  이 안내되고 있습니다.
+                </p>
+                <div class="counter-box">
+                  <p>
+                    <div class="counter">1</div> / 2
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="m-section2">
+          <div class="inner">
+            <div class="forum-event">
+              <h2 class="tab-tit">
+                <span>포럼 및 행사</span>
+              </h2>
+              <ul class="forum-list">
+                <li>
+                  <a href="./project1_form.html" class="image">
+                    <img
+                      src="./img/con2/con2-tit-img.jpg"
+                      alt="2022년도 혁신도전 프로젝트 연구테마 공모"
+                    />
+                  </a>
+                  <div class="text-area">
+                    <p><span class="emptyTxt">행사안내</span></p>
+                    <a href="./project1_form.html"
+                      ><strong class="tit"
+                        >2022년도 혁신도전 프로젝트 연구테마 공모</strong
+                      ></a
+                    >
+                    <span class="date"
+                      >2022-01-10(월) 00:00 ~ 2022-02-09(수) 23:59</span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <a href="./project1_form.html" class="image center">
+                    <img
+                      src="./img/con2/con2-1.jpg"
+                      alt="2022년 정부R&D 사업 온라인 부처합동설명회"
+                    />
+                  </a>
+                  <div class="text-area">
+                    <a href="./project1_form.html"
+                      ><strong class="tit"
+                        >2022년 정부R&D 사업 온라인 <br />
+                        부처합동설명회</strong
+                      ></a
+                    >
+                    <span class="date"
+                      >2022-01-25(화) 13:30 ~ 2022-01-27(목) 18:00</span
+                    >
+                    <p><span class="emptyTxt">행사안내</span></p>
+                  </div>
+                </li>
+                <li>
+                  <a href="./project1_form.html" class="image">
+                    <img
+                      src="./img/con2/con2-2.png"
+                      alt="제141회 KISTEP 수요포럼 개최, 초광역협력을 통한 지역R&D 역량 강화"
+                    />
+                  </a>
+                  <div class="text-area">
+                    <a href="./project1_form.html"
+                      ><strong class="tit"
+                        >제141회 KISTEP 수요포럼 개최,<br />초광역협력을 통한
+                        지역R&D 역량 강화</strong
+                      ></a
+                    >
+                    <span class="date">2021-12-15(금) 14:12</span>
+                    <p><span class="emptyTxt fullTxt">수요포럼</span></p>
+                  </div>
+                </li>
+                <li>
+                  <a href="./project1_form.html" class="image">
+                    <img
+                      src="./img/con2/con2-3.jpg"
+                      alt="SEE-KISTEP, Think 2022 과학기술혁신정책 대토론회"
+                    />
+                  </a>
+                  <div class="text-area">
+                    <a href="./project1_form.html"
+                      ><strong class="tit"
+                        >SEE-KISTEP, Think 2022<br />과학기술혁신정책
+                        대토론회</strong
+                      ></a
+                    >
+                    <span class="date"
+                      >2021-12-07(화) 10:00 ~ 2021-12-09(목) 18:00</span
+                    >
+                    <p>
+                      <span class="emptyTxt">행사 사전등록</span>
+                      <span class="emptyTxt live">온라인 생중계</span>
+                      <span class="emptyTxt">자료집</span>
+                      <span class="emptyTxt">행사안내</span>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <a href="./project1_form.html" class="more">
+                <i class="fa-thin fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="m-section3">
+          <div class="inner">
+            <div class="publication-area">
+              <h2 class="tab-tit">
+                <a href="#publication1" class="active briefs">브리프</a>
+              </h2>
+              <div id="publication1" class="tab-content cf active">
+                <nav>
+                  <ul class="publication-nav fl">
+                    <li>
+                      <a href="#publication1-1" class="active">
+                        전체
+                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#publication1-2">
+                        이슈페이퍼
+                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#publication1-3">
+                        정책브리프
+                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#publication1-4">
+                        통계브리프
+                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#publication1-5">
+                        기술동향브리프
+                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#publication1-6">
+                        사과플러스
+                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#publication1-7">
+                        미래예측브리프
+                        
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <div id="publication1-1" class="publication-content active">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-1-1.jpg"
+                            alt="[KISTEP 브리프] 미래 스마트 팩토리 유망"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP 브리프] 미래 스마트 팩토리 유망 ..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-1-2.jpg"
+                            alt="[KISTEP 브리프] 러시아-우크라이나 사태에"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP 브리프] 러시아-우크라이나 사태에..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-1-3.jpg"
+                            alt="[KISTEP 브리프] 바이오헬스 정책·투자동향"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP 브리프] 바이오헬스 정책·투자동향</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-1-4.jpg"
+                            alt="[KISTEP 브리프] 2020년 신약개발 정부 R&D.."
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP 브리프] 2020년 신약개발 정부 R&D..</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="publication1-2" class="publication-content">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-2-1.png"
+                            alt="[2022-2] 국내외 환경변화에 따른 과학기술.."
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[2022-2] 국내외 환경변화에 따른 과학기술..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-2-2.png"
+                            alt="[2022-1] KISTEP Think 2022, 15대 과학기술.."
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[2022-1] KISTEP Think 2022, 15대 과학기술..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-2-3.png"
+                            alt="[2021-20] 국가 R&D 기술사업화 핵심 영향요"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[2021-20] 국가 R&D 기술사업화 핵심 영향요..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-2-4.png"
+                            alt="[2021-19] 탄소중립 달성을 위한 정부 연구"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[2021-19] 탄소중립 달성을 위한 정부 연구..</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="publication1-3" class="publication-content">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-1-2.jpg"
+                            alt="[KISTEP 브리프] 러시아-우크라이나 사태에"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP 브리프] 러시아-우크라이나 사태에..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-3-2.jpg"
+                            alt="[KISTEP 브리프] 미 하원「2022년 미국 경쟁.."
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP 브리프] 미 하원「2022년 미국 경쟁..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-3-3.jpg"
+                            alt="[2021-15] Pax Technica 시대, 지속가능한"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[2021-15] Pax Technica 시대, 지속가능한 ..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-3-4.jpg"
+                            alt="[2021-14] 유럽연합의 중소기업 기술혁신지"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[2021-14] 유럽연합의 중소기업 기술혁신지..</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="publication1-4" class="publication-content">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-1-4.jpg"
+                            alt="[KISTEP 브리프] 2020년 신약개발 정부 R&D.."
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP 브리프] 2020년 신약개발 정부 R&D..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-4-2.jpg"
+                            alt="[KISTEP 브리프] 2020년 한국의 과학기술논"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP 브리프] 2020년 한국의 과학기술논..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-4-3.jpg"
+                            alt="[K-브리프] 2021년 제20호. 2020년 우리나라"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[K-브리프] 2021년 제20호. 2020년 우리나라..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-4-4.jpg"
+                            alt="[K-브리프] 2021년 제19호. 2020년 우리나라"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[K-브리프] 2021년 제19호. 2020년 우리나라..</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="publication1-5" class="publication-content">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-1-3.jpg"
+                            alt="[KISTEP 브리프] 바이오헬스 정책·투자동향"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP 브리프] 바이오헬스 정책·투자동향</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-5-2.jpg"
+                            alt="[KISTEP 브리프] 메디컬 섬유소재"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP 브리프] 메디컬 섬유소재</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-5-3.jpg"
+                            alt="[KISTEP 브리프] 시스템반도체"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP 브리프] 시스템반도체</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-5-4.jpg"
+                            alt="[KISTEP기술동향브리프] 전기상용차 (2021-"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP기술동향브리프] 전기상용차 (2021-..</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="publication1-6" class="publication-content">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-6-1.jpg"
+                            alt="[KISTEP 사과플러스] 4호 2021년도 사회문제"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP 사과플러스] 4호 2021년도 사회문제..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-6-2.jpg"
+                            alt="[KISTEP 사과플러스] 3호 수요자 참여형 사"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP 사과플러스] 3호 수요자 참여형 사..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-6-3.jpg"
+                            alt="[KISTEP 사과플러스] 2호 코로나19 대응을"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP 사과플러스] 2호 코로나19 대응을 ..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-6-4.jpg"
+                            alt="[KISTEP 사과플러스] 1호 국가연구개발사업"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP 사과플러스] 1호 국가연구개발사업..</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="publication1-7" class="publication-content">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-1-1.jpg"
+                            alt="[KISTEP 브리프] 미래 스마트 팩토리 유망"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >[KISTEP 브리프] 미래 스마트 팩토리 유망 ..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-7-2.jpg"
+                            alt="미래예측 브리프[2021-3] 디지털 격차의 미"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >미래예측 브리프[2021-3] 디지털 격차의 미..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-7-3.jpg"
+                            alt="미래예측 브리프[2021-2] 벌떼 드론 자율무"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >미래예측 브리프[2021-2] 벌떼 드론 자율무..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/1-7-4.jpg"
+                            alt="미래예측 브리프[2021-1] 미래우주에서 우리"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >미래예측 브리프[2021-1] 미래우주에서 우리..</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <h2 class="tab-tit">
+                <a href="#publication2" class="publication">간행물</a>
+              </h2>
+              <div id="publication2" class="tab-content cf">
+                <nav>
+                  <ul class="publication-nav fl">
+                    <li>
+                      <a href="#publication2-1" class="all">
+                        전체
+                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#publication2-2">
+                        뉴스레터
+                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#publication2-3">
+                        연차보고서
+                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#publication2-4">
+                        KISTEP lnl
+                        
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <div id="publication2-1" class="publication-content active">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/2-1-1.jpg"
+                            alt="KISTEP InI Vol.39 / HAPPY NEW YEAR 2022"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >KISTEP InI Vol.39 / HAPPY NEW YEAR 2022</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/2-1-2.jpg"
+                            alt="KISTEP InI Vol.38 / Autumn 2021"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >KISTEP InI Vol.38 / Autumn 2021</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/2-1-3.jpg"
+                            alt="KISTEP InI Vol.37 / Summer 2021"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >KISTEP InI Vol.37 / Summer 2021</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/2-1-4.jpg"
+                            alt="KISTEP 연차보고서(2020년)"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >KISTEP 연차보고서(2020년)</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="publication2-2" class="publication-content">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img src="./img/con3/2-2-1.jpg" alt="2022년 1월" />
+                        </span>
+                        <strong class="tit">2022년 1월</strong></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img src="./img/con3/2-2-2.jpg" alt="2021년 12월" />
+                        </span>
+                        <strong class="tit">2021년 12월.</strong></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img src="./img/con3/2-2-3.jpg" alt="2021년 11월" />
+                        </span>
+                        <strong class="tit">2021년 11월</strong></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img src="./img/con3/2-2-4.jpg" alt="2021년 10월" />
+                        </span>
+                        <strong class="tit">2021년 10월</strong></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="publication2-3" class="publication-content">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/2-1-4.jpg"
+                            alt="KISTEP 연차보고서(2020년)"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >KISTEP 연차보고서(2020년)</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/2-3-2.jpg"
+                            alt="KISTEP 연차보고서(2019년)"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >KISTEP 연차보고서(2019년)</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/2-3-3.jpg"
+                            alt="KISTEP 연차보고서(2018년)"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >KISTEP 연차보고서(2018년)</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/2-3-4.svg"
+                            alt="KISTEP 연차보고서(2017년)"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >KISTEP 연차보고서(2017년)</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="publication2-4" class="publication-content">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/2-1-1.jpg"
+                            alt="KISTEP InI Vol.39 / HAPPY NEW YEAR 2022"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >KISTEP InI Vol.39 / HAPPY NEW YEAR 2022</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/2-1-2.jpg"
+                            alt="KISTEP InI Vol.38 / Autumn 2021"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >KISTEP InI Vol.38 / Autumn 2021</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/2-1-3.jpg"
+                            alt="KISTEP InI Vol.37 / Summer 2021"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >KISTEP InI Vol.37 / Summer 2021</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/2-4-4.jpg"
+                            alt="KISTEP InI Vol.36 / Spring 2021"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >KISTEP InI Vol.36 / Spring 2021</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <h2 class="tab-tit">
+                <a href="#publication3" class="report">보고서</a>
+              </h2>
+              <div id="publication3" class="tab-content cf">
+                <nav>
+                  <ul class="publication-nav fl">
+                    <li>
+                      <a href="#publication3-1" class="all">
+                        전체
+                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#publication3-2">
+                        미래예측
+                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#publication3-3">
+                        정책기획
+                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#publication3-4">
+                        사업조정
+                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#publication3-5">
+                        성과확산
+                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#publication3-6">
+                        조사·평가
+                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#publication3-7">
+                        예비타당성
+                        
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <div id="publication3-1" class="publication-content active">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type03">사업조정</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-3.svg"
+                            alt="정부 R&D투자의 전략성 제고를 위한 경제적"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >정부 R&D투자의 전략성 제고를 위한 경제적..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type03">사업조정</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-3.svg"
+                            alt="정부R&D사업 기획평가관리비의 전략적 편성 방안 연구"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >정부R&D사업 기획평가관리비의 전략적 편성 방안
+                          연구</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type03">사업조정</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-3.svg"
+                            alt="2021년 전략적 R&D예산 배분 및 편성을 위한 정책기반 구축에 관한 연구"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >2021년 전략적 R&D예산 배분 및 편성을 위한 정책기반
+                          구축에 관한 연구</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type05">조사·평가</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-5.svg"
+                            alt="과기 출연연 기관평가의 새로운 접근법 탐색 연구"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >과기 출연연 기관평가의 새로운 접근법 탐색
+                          연구</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="publication3-2" class="publication-content">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type01">미래예측</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-1.svg"
+                            alt="2021년 기술영향평가"
+                          />
+                        </span>
+                        <strong class="tit">2021년 기술영향평가</strong></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type01">미래예측</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-1.svg"
+                            alt="2022년 KISTEP 미래유망기술 선정에 관한 연"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >2022년 KISTEP 미래유망기술 선정에 관한 연..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type01">미래예측</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-1.svg"
+                            alt="미래 불확실성에 대응하는 환경변화 탐색 및"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >미래 불확실성에 대응하는 환경변화 탐색 및..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type01">미래예측</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-1.svg"
+                            alt="2021년 기술수준평가 -기술수준평가 방법론"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >2021년 기술수준평가 -기술수준평가 방법론..</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="publication3-3" class="publication-content">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type02">정책기획</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-2.svg"
+                            alt="성장동력의 공공-민간 파트너십 강화를 위한"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >성장동력의 공공-민간 파트너십 강화를 위한..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type02">정책기획</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-2.svg"
+                            alt="범부처 사회문제해결 기반 구축"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >범부처 사회문제해결 기반 구축</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type02">정책기획</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-2.svg"
+                            alt="2020년도 과학기술분야 중장기계획 조사·분석"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >2020년도 과학기술분야 중장기계획 조사·분석</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type02">정책기획</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-2.svg"
+                            alt="2021년도 지역 R&D체계 발전 방향에 관한 연구"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >2021년도 지역 R&D체계 발전 방향에 관한 연구</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="publication3-4" class="publication-content">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type03">사업조정</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-3.svg"
+                            alt="정부 R&D투자의 전략성 제고를 위한 경제적"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >정부 R&D투자의 전략성 제고를 위한 경제적..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type03">사업조정</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-3.svg"
+                            alt="정부R&D사업 기획평가관리비의 전략적 편성 방안 연구"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >정부R&D사업 기획평가관리비의 전략적 편성 방안
+                          연구</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type03">사업조정</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-3.svg"
+                            alt="2021년 전략적 R&D예산 배분 및 편성을 위한 정책기반 구축에 관한 연구"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >2021년 전략적 R&D예산 배분 및 편성을 위한 정책기반
+                          구축에 관한 연구</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type03">사업조정</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-3.svg"
+                            alt="2021년도 글로벌 R&D 투자동향 분석"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >2021년도 글로벌 R&D 투자동향 분석</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="publication3-5" class="publication-content">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type04">성과확산</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-4.svg"
+                            alt="국가연구개발 연구성과 관리·활용 실태조사 최종보고서"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >국가연구개발 연구성과 관리·활용 실태조사
+                          최종보고서</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type04">성과확산</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-4.svg"
+                            alt="2021년 연구성과 관리활용 및 운영지원"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >2021년 연구성과 관리활용 및 운영지원</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type04">성과확산</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-4.svg"
+                            alt="정부R&D 등록·기탁 성과물 심층분석 연구"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >정부R&D 등록·기탁 성과물 심층분석 연구</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type04">성과확산</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-4.svg"
+                            alt="과학기술혁신정책 글로벌 역량 및 전문성 강화 연구"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >과학기술혁신정책 글로벌 역량 및 전문성 강화
+                          연구</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="publication3-6" class="publication-content">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type05">조사·평가</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-5.svg"
+                            alt="과기 출연연 기관평가의 새로운 접근법 탐색 연구"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >과기 출연연 기관평가의 새로운 접근법 탐색
+                          연구</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type05">조사·평가</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-5.svg"
+                            alt="2021년 국가연구개발 성과평가 정책 수립 및 성과평가 실시"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >2021년 국가연구개발 성과평가 정책 수립 및 성과평가
+                          실시</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type05">조사·평가</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-5.svg"
+                            alt="“공공기술개발” 유형 국가연구개발사업 성과평가 방법 및 성과지표 개선 연구: 중간평가와 표준성과지표를 중심으로"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >“공공기술개발” 유형 국가연구개발사업 성..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type05">조사·평가</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-5.svg"
+                            alt="2021년 국가연구개발사업 상위평가 보고서"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >2021년 국가연구개발사업 상위평가 보고서(..</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="publication3-7" class="publication-content">
+                  <ul class="list">
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type06">예비타당성조사</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-6.svg"
+                            alt="국가연구개발사업 예비타당성조사 수행 세부"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >국가연구개발사업 예비타당성조사 수행 세부..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type06">예비타당성조사</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-6.svg"
+                            alt="2021년 R&D사업 예비타당성조사 일관성 제고"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >국2021년 R&D사업 예비타당성조사 일관성 제고..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type06">예비타당성조사</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-6.svg"
+                            alt="2021년 국가R&D사업 사전분석 전문 네트워크"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >2021년 국가R&D사업 사전분석 전문 네트워크..</strong
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="./project1_form.html">
+                        <span class="type06">예비타당성조사</span>
+                        <span class="thumb">
+                          <img
+                            src="./img/con3/3-6.svg"
+                            alt="2021년도 사업계획 적정성 재검토 보고서 재"
+                          />
+                        </span>
+                        <strong class="tit"
+                          >2021년도 사업계획 적정성 재검토 보고서 재..</strong
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <a href="./project1_form.html" class="more">
+                <i class="fa-thin fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="m-section4">
+          <div class="inner">
+            <h2 class="section-tit">KISTEP 소개</h2>
+            <div class="brochoure-area pr">
+              <article class="brochoure">
+                <h3 class="tit fl">
+                  KISTEP<br />Brochure<br /><span class="blue">2020</span>
+                </h3>
+                <p class="thumb fr">
+                  <img
+                    src="./img/con4/brochure01.jpg"
+                    alt="KISTEP Brochure 2020"
+                  />
+                </p>
+                <a href="./project1_form.html"
+                  >바로보기
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+              </article>
+              <article class="report cf">
+                <h3 class="tit fl">
+                  <span class="ko">연차보고서</span><br /><span class="red"
+                    >2020</span
+                  >
+                </h3>
+                <p class="thumb fr">
+                  <img
+                    src="./img/con4/brochure02.jpg"
+                    alt="KISTEP Brochure 2020"
+                  />
+                </p>
+                <a href="./project1_form.html"
+                  >바로보기
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+              </article>
+            </div>
+            <div class="video-area fl pr">
+              <h3 class="tit">홍보동영상</h3>
+              <a href="./project1_form.html" class="video">
+                <img
+                  src="./img/con4/boardImgView.gif"
+                  alt="우리는 KISTEP입니다."
+                />
+              </a>
+            </div>
+            <div class="news-area fr pr">
+              <h3 class="tit">언론기사</h3>
+              <ul class="list">
+                <li class="pr">
+                  <a href="./project1_form.html">
+                    데이터 3법 시행 2개월...'마이데이터' 확대하고 '가명ㆍ익명
+                    정..
+                  </a>
+                  <span class="date">2020.10.07</span>
+                  <span class="press">AI타임스</span>
+                </li>
+                <li class="pr">
+                  <a href="./project1_form.html">
+                    ‘급변하는 미래, 과학기술인재 육성방안’ 온라인 포럼 개최
+                  </a>
+                  <span class="date">2020.10.07</span>
+                  <span class="press">CCTV뉴스</span>
+                </li>
+                <li class="pr">
+                  <a href="./project1_form.html">
+                    韓, 세계 혁신 지수 10위 기록…세계 100대 과학 클러스터에
+                    서울..
+                  </a>
+                  <span class="date">2020.09.29</span>
+                  <span class="press">AI타임스</span>
+                </li>
+              </ul>
+              <a href="./project1_form.html" class="more">
+                <i class="fa-thin fa-plus"></i>
+              </a>
+            </div>
+            <div class="map-area fl pr">
+              <h3 class="sr-only">조직 및 부서 바로가기</h3>
+              <a href="./project1_form.html">
+                <i class="icon"></i>
+                조직 및 부서
+                <i class="fa-solid fa-angle-right"></i>
+              </a>
+            </div>
+            <div class="sns-area fr pr">
+              <h3 class="sr-only">SNS 바로가기</h3>
+              <ul class="link">
+                <li class="facebook pr fl">
+                  <a href="./project1_form.html">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <span>페이스북</span>
+                  </a>
+                </li>
+                <li class="youtobe pr fr">
+                  <a href="./project1_form.html">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>페이스북</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //#main -->
+      <div id="foot-banner">
+        <div class="inner">
+          <h2 class="sr-only">배너</h2>
+          <div class="site">
+            <div class="view pr">
+              <ul class="list">
+                <li>
+                  <a href="./project1_form.html">
+                    <img
+                      src="./img/foot/HPP.gif"
+                      alt="HPP 과학기술인재정책 플랫폼"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="./project1_form.html">
+                    <img
+                      src="./img/foot/IRIS.gif"
+                      alt="HPP 과학기술인재정책 플랫폼"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="./project1_form.html">
+                    <img
+                      src="./img/foot/20210326181828817.gif"
+                      alt="HPP 과학기술인재정책 플랫폼"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="./project1_form.html">
+                    <img
+                      src="./img/foot/KIRD.gif"
+                      alt="HPP 과학기술인재정책 플랫폼"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="./project1_form.html">
+                    <img
+                      src="./img/foot/TOTAL.jpg"
+                      alt="HPP 과학기술인재정책 플랫폼"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="./project1_form.html">
+                    <img
+                      src="./img/foot/FORM.jpg"
+                      alt="HPP 과학기술인재정책 플랫폼"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="./project1_form.html">
+                    <img
+                      src="./img/foot/KIRD.gif"
+                      alt="HPP 과학기술인재정책 플랫폼"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="inner pr">
+          <div class="site-list fr">
+            <p>
+              관련사이트 바로가기
+              <i class="fa-solid fa-caret-up"></i>
+            </p>
+            <div class="list-up">
+              <ul class="list">
+                <li>
+                  <a href="project1_form.html">과학기술정책지원서비스</a>
+                </li>
+                <li>
+                  <a href="project1_form.html">글로벌과학기술정책정보</a>
+                </li>
+                <li>
+                  <a href="project1_form.html">과학기술이재정책플랫폼</a>
+                </li>
+                <li>
+                  <a href="project1_form.html">국가과학기술지식정보서비스</a>
+                </li>
+                <li>
+                  <a href="project1_form.html">R&D예타로</a>
+                </li>
+                <li>
+                  <a href="project1_form.html">사회문제해결플랫폼</a>
+                </li>
+                <li>
+                  <a href="project1_form.html">범부처통합연구지원시스템</a>
+                </li>
+                <li>
+                  <a href="project1_form.html">Asian Research Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-nav">
+            <div class="nav">
+              <ul class="fnb">
+                <li>
+                  <a href="./project1_form.html" class="point">
+                    개인정보처리방침
+                  </a>
+                </li>
+                <li>
+                  <a href="./project1_form.html"> 웹접근성이용가이드 </a>
+                </li>
+                <li>
+                  <a href="./project1_form.html"> 이메일 무단수집 거부 </a>
+                </li>
+                <li>
+                  <a href="./project1_form.html"> 개인정보처리내용 공개 </a>
+                </li>
+                <li>
+                  <a href="./project1_form.html"> 찾아오시는 길 </a>
+                </li>
+                <li>
+                  <a href="./project1_form.html"> 홈페이지 운영지침 </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-info cf">
+              <address>충청북도 음성군 맹동면 원중로 1339</address>
+              <span>
+                대표전화 :
+                <a href="tel:010-561-0810">049-561-0810</a>
+              </span>
+              <span>FAX : 049-561-0810</span>
+              <p class="copyright">
+                Copyright 2020 © 한국과학기술기획평가원(KISTEP) All Rights
+                Reserved.
+              </p>
+            </div>
+            <p class="mark">
+              <img src="./img/foot/mark.png" alt="접근성마크" />
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- //#footer -->
+    </div>
+    <!-- //#wrap -->
+    <div id="back-top-btn">
+      <a href="#wrap" class="btn"
+        ><i class="fa-solid fa-caret-up"></i><br /><span>TOP</span></a
+      >
+    </div>
+  </body>
 </html>

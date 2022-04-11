@@ -58,6 +58,8 @@ textarea {
 #wrap {
   color: #777;
   text-align: center;
+  width: 100%;
+  position: relative;
 }
 #header {
   width: 100%;

@@ -11,7 +11,9 @@
 #h-top.active input{
   border-bottom: 2px solid #333;
 }
-#h-top.active .btn,
+#h-top.active .btn{
+  color: #ec411b;
+}
 #h-top.active input,
 #h-top.active input::placeholder,
 #h-top.active .h-top-lang,
@@ -147,8 +149,8 @@
   opacity: 0;
   transition: all 0.5s;
 }
-#h-nav .h-nav-menu > ul > li > a:hover::after,
-#h-nav .h-nav-menu > ul > li > a:focus::after {
+#h-nav .h-nav-menu > ul > li:hover > a::after,
+#h-nav .h-nav-menu > ul > li:focus > a::after {
   opacity: 1;
 }
 
@@ -191,7 +193,10 @@
   border-radius: 3px;
 }
 #h-nav .h-nav-btn > span {
-  display: none;
+  width: 0;
+  height: 0;
+  position: absolute;
+  border: 0;
 }
 
 /* #h-banner */
@@ -320,7 +325,7 @@
 #h-banner .next::before,
 #h-banner .prev::before,#h-banner .controls-auto button::before {
   font-family: "FontAwesome";
-    font-size: 20px;
+    font-size: 14px;
     line-height: 1;
     opacity: 1;
     color: white;
@@ -380,7 +385,7 @@
 }
 #h-slider .h-prev,
 #h-slider .h-next{
-  font-size: 1.7em;
+  font-size: 1.5em;
   border: 1px solid #fff;
   border-radius: 100%;
   color: #fff;

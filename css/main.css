@@ -2,7 +2,8 @@
 #main {
   background: url(../img/info_bg.png) no-repeat center bottom;
 }
-#m-section1 ~ [id*="section"] .more {
+#m-section1 ~ [id*="section"] .more,
+#m-section1 .more {
   display: block;
   position: absolute;
   top: 6px;
@@ -12,12 +13,13 @@
   text-align: center;
   overflow: hidden;
 }
-#m-section1 ~ [id*="section"] .more>i {
+#m-section1 ~ [id*="section"] .more>i,
+#m-section1 .more>i {
   width: 100%;
   height: 100%;
   color: #2c3e50;
-  line-height: 1.3;
   font-size: 40px;
+  text-align: right;
 }
 #m-section1 ~ * {
   position: relative;
@@ -316,7 +318,6 @@
 }
 #m-section2 .forum-event .text-area {
   display: block;
-  padding-top: 10px;
   position: relative;
   overflow: hidden;
 }
@@ -360,16 +361,14 @@
   height: 171px;
   margin-bottom: 15px;
 }
+#m-section2 .forum-list li:nth-child(2){
+  margin-bottom: -15px;
+}
 #m-section2 .forum-list li:nth-child(n + 2) .image {
   position: relative;
   display: block;
   width: 304px;
-  height: 171px;
   margin-right: 20px;
-}
-#m-section2 .forum-list li:nth-child(n + 2) .center img {
-  position: absolute;
-  top: 13px;
 }
 #m-section2 .forum-list li:nth-child(n + 2) img {
   width: 100%;
@@ -378,7 +377,7 @@
 /* #m-section3 */
 #m-section3 {
   width: 100%;
-  margin: -235px 0 70px;
+  margin: -320px 0 70px;
   padding-top: 40px;
 }
 #m-section3::after {
@@ -410,8 +409,16 @@
   min-height: 450px;
   padding: 50px;
   background-color: #fff;
-  box-shadow: 7px 7px 50px rgb(0 0 0/5%);
   overflow: hidden;
+}
+#m-section3 .tab-content::after{
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  box-shadow: 7px 7px 50px rgb(0 0 0/.5);
 }
 #m-section3 .publication-nav {
   width: 175px;

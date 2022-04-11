@@ -63,14 +63,12 @@
   padding: 47px 0 56px;
   font-weight: 300;
 }
-#footer .footer-wrap {
+#footer .footer-nav {
   color: #d5d5d5;
   font-size: 16px;
   font-weight: 200;
 }
-#footer .footer-nav {
-  
-}
+
 #footer .fnb li {
   position: relative;
   float: left;
@@ -102,20 +100,34 @@
   content: "";
 }
 
-#footer .site-list {
-  width: 100%;
-  height: 360px;
+
+#footer>.inner.active{
+  height: 400px;
+  bottom: 310px;
+}
+#footer>.inner.active .footer-nav{
   position: absolute;
+  bottom: 0;
+}
+#footer>.inner.active .mark{
+  right: 160px;
+}
+#footer>.inner.active .site-list>p{
+  background: #fff;
+  color: #222;
+  border: none;
+}
+#footer .site-list {
+  width: 250px;
+  height: 300px;
   z-index: 1;
   box-sizing: border-box;
   transition: all .2s;
-  bottom: 115px;
+  bottom: 44px;
+  position: absolute;
+  right: 0;
 }
-#footer .site-list .inner{
-  position: relative;
-  height: 360px;
-}
-#footer .site-list .inner>p {
+#footer .site-list p {
   display: block;
   position: absolute;
   width: 250px;
@@ -127,26 +139,15 @@
   right: 0;
   float: left;
 }
-#footer .site-list .inner>p.active{
-  background: #fff;
-  color: #222;
-}
 #footer .site-list p:hover {
   text-decoration: underline;
 }
 #footer .list-up{
-  position: relative;
-  width: 100%;
+  position: absolute;
+  width: 250px;
   height: 312.5px;
-  bottom: -3px;
-  right: -1030px;
-  visibility: hidden;
-  opacity: 0;
-  transition: all .2s;
-}
-#footer .list-up.active{
-  visibility: visible;
-  opacity: 1;
+  bottom: 45px;
+  right: 0;
 }
 #footer .list-up .list{
   width: 250px;
@@ -159,9 +160,12 @@
   width: 100%;
   padding: 8px 20px;
 }
+#footer .list-up .list a:hover{
+  text-decoration: underline;
+}
 
-#footer .footer-info {
-  padding-top: 25px;
+#footer .footer-info{
+  padding-top: 20px;
 }
 #footer .footer-info address {
   float: left;
@@ -170,6 +174,6 @@
 }
 #footer .mark {
   position: absolute;
-  right: 560px;
-  bottom: 50px;
+  right: 570px;
+  bottom: 0;
 }

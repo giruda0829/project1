@@ -21,6 +21,7 @@
     <meta name="msapplication-TileColor" content="#ffffff"/>
     <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png"/>
     <meta name="theme-color" content="#ffffff"/>
+    <!-- //favicon -->
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -38,6 +39,7 @@
 
     <!-- jq코어 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
     <!-- 적응형 -->
     <script src="java/detectmobilebrowser.js"></script>
     <script>
@@ -45,17 +47,19 @@
         location.href="./mobile/"
       }
     </script>
+
     <!-- bx_slide 플러그인 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+
     <!-- jq -->
     <script src="jq/submenu.js"></script>
     <script src="jq/slide_bx.js"></script>
     <script src="jq/slide-script.js"></script>
     <script src="jq/topbtn.js"></script>
+    <script src="jq/footer-menu.js"></script>
 
     <!-- js -->
     <script src="js/m-section-tap.js"></script>
-    <script src="js/m-section3-tap.js"></script>
   </head>
   <body>
     <div id="skip-menu">
@@ -103,7 +107,7 @@
                   />
                   <button type="submit" name="button" class="btn">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
+                  <span class="hidden">검색</span></button>
                 </form>
               </div>
               <!-- //.h-top-searchbar -->
@@ -136,7 +140,7 @@
                   ><img
                     src="./img/logo_whiht.png"
                     alt="KISTEP 한국과학기술기획평가원의 로고입니다"
-                    title="KISTEP 한국과학기술기획평가원" class="main"
+                    title="KISTEP 한국과학기술기획평가원" class="main active"
                 /></a>
                 <a href="index.html"
                   ><img
@@ -734,7 +738,7 @@
               </div>
               <!-- //.h-nav-menu -->
               <div class="h-nav-btn fr">
-                <span>사이트맵 열기</span>
+                <span class="sr_only">사이트맵 열기</span>
                 <div class="btn"></div>
               </div>
               <!-- //.h-nav-btn -->
@@ -1663,7 +1667,7 @@
                 </p>
                 <div class="counter-box">
                   <p>
-                    <div class="counter">1</div> / 4
+                    <div class="counter">1</div> / 2
                   </p>
                 </div>
               </div>
@@ -1776,7 +1780,7 @@
                 <nav>
                   <ul class="publication-nav fl">
                     <li>
-                      <a href="#publication1-1" class="active">
+                      <a href="#publication1-1" class="all active">
                         전체
                         <i class="fa-solid fa-chevron-right"></i>
                       </a>
@@ -1819,7 +1823,7 @@
                     </li>
                   </ul>
                 </nav>
-                <div id="publication1-1" class="publication-content active">
+                <div id="publication1-1" class="publication-content active all_cont">
                   <ul class="list">
                     <li>
                       <a href="./project1_form.html">
@@ -2215,7 +2219,7 @@
               <h2 class="tab-tit">
                 <a href="#publication2" class="publication">간행물</a>
               </h2>
-              <div id="publication2" class="tab-content cf">
+              <div id="publication2" class="tab-content cf all_cont">
                 <nav>
                   <ul class="publication-nav fl">
                     <li>
@@ -2452,7 +2456,7 @@
               <h2 class="tab-tit">
                 <a href="#publication3" class="report">보고서</a>
               </h2>
-              <div id="publication3" class="tab-content cf">
+              <div id="publication3" class="tab-content all_cont cf">
                 <nav>
                   <ul class="publication-nav fl">
                     <li>
@@ -3107,8 +3111,8 @@
         </div>
       </div>
       <div id="footer">
-        <div class="site-list fr">
-          <div class="inner">
+        <div class="inner pr">
+          <div class="site-list fr">
             <p>
               관련사이트 바로가기
               <i class="fa-solid fa-caret-up"></i>
@@ -3142,8 +3146,6 @@
               </ul>
             </div>
           </div>
-        </div>
-        <div class="footer-wrap inner">
           <div class="footer-nav">
             <div class="nav">
               <ul class="fnb">
@@ -3173,9 +3175,9 @@
               <address>충청북도 음성군 맹동면 원중로 1339</address>
               <span>
                 대표전화 :
-                <a href="tel:010-3418-0810">043-750-2300</a>
+                <a href="tel:010-561-0810">049-561-0810</a>
               </span>
-              <span>FAX : 043-750-2680</span>
+              <span>FAX : 049-561-0810</span>
               <p class="copyright">
                 Copyright 2020 © 한국과학기술기획평가원(KISTEP) All Rights
                 Reserved.
@@ -3195,15 +3197,5 @@
         ><i class="fa-solid fa-caret-up"></i><br /><span>TOP</span></a
       >
     </div>
-    <script>
-      $("#footer .site-list>.inner>p").click(function(){
-        $("#footer .site-list>.inner>p").addClass('active');
-        $("#footer .site-list>.inner>.list-up").addClass('active');
-      });
-      $("#footer .site-list>.inner>p.active").click(function(){
-        $("#footer .site-list>.inner>p").removeClass('active');
-        $("#footer .site-list>.inner>.list-up").removeClass('active');
-      });
-    </script>
   </body>
 </html>

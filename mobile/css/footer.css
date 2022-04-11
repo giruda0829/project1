@@ -1,0 +1,180 @@
+#foot-banner {
+  clear: both;
+  position: relative;
+  margin: 20px auto 50px;
+  overflow: hidden;
+}
+#foot-banner .site {
+  max-width: 100%;
+  overflow: hidden;
+}
+#foot-banner .site .view {
+  width: 100%;
+  overflow: hidden;
+  height: 45px !important;
+}
+#foot-banner .site .view .list {
+  height: 100%;
+  display: flex;
+}
+#foot-banner .site .view .list li {
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+}
+#foot-banner .bx-prev,
+#foot-banner .bx-next{
+  font-family: 'FontAwesome';
+  width: 35px;
+  height: 35px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  text-align: center;
+  line-height: 33px;
+}
+#foot-banner .bx-next{
+  right: 44px;
+}
+#foot-banner .bx-start,
+#foot-banner .bx-stop{
+  font-family: 'FontAwesome';
+  width: 35px;
+  height: 35px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  text-align: center;
+  line-height: 33px;
+}
+
+#footer {
+  clear: both;
+  position: relative;
+  background-color: #1c1f3a;
+  margin: auto;
+  padding: 47px 0 56px;
+  font-weight: 300;
+}
+#footer .footer-nav {
+  color: #d5d5d5;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+#footer .fnb li {
+  position: relative;
+  float: left;
+}
+#footer .fnb li:first-child a {
+  display: block;
+  position: relative;
+  padding-right: 10px;
+}
+#footer .fnb li:nth-child(n + 2) a {
+  display: block;
+  position: relative;
+  padding: 0 10px;
+}
+#footer .fnb a.point {
+  color: #ec411b;
+}
+#footer .fnb a:hover {
+  text-decoration: underline;
+}
+#footer .fnb li:nth-child(n + 2) a:before {
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 1px;
+  height: 10px;
+  background-color: #9c9c9c;
+  content: "";
+}
+
+
+#footer>.inner.active{
+  height: 400px;
+  bottom: 310px;
+}
+#footer>.inner.active .footer-nav{
+  position: absolute;
+  bottom: 0;
+}
+#footer>.inner.active .mark{
+  right: 160px;
+}
+#footer>.inner.active .site-list>p{
+  background: #fff;
+  color: #222;
+  border: none;
+}
+#footer .site-list {
+  width: 250px;
+  height: 300px;
+  z-index: 1;
+  box-sizing: border-box;
+  transition: all .2s;
+  bottom: 44px;
+  position: absolute;
+  right: 0;
+}
+#footer .site-list p {
+  display: block;
+  position: absolute;
+  width: 250px;
+  height: 45px;
+  padding: 8px 20px;
+  border: 1px solid #bebebe;
+  color: #fff;
+  bottom: 0;
+  right: 0;
+  float: left;
+}
+#footer .site-list p:hover {
+  text-decoration: underline;
+}
+#footer .list-up{
+  position: absolute;
+  width: 250px;
+  height: 312.5px;
+  bottom: 45px;
+  right: 0;
+}
+#footer .list-up .list{
+  width: 250px;
+  background: #fff;
+  color: #222;
+  border: none;
+}
+#footer .list-up .list a{
+  display: block;
+  width: 100%;
+  padding: 8px 20px;
+}
+#footer .list-up .list a:hover{
+  text-decoration: underline;
+}
+
+#footer .footer-info{
+  padding-top: 20px;
+}
+#footer .footer-info address {
+  float: left;
+  font-style: normal;
+  margin-right: 10px;
+}
+#footer .mark {
+  position: absolute;
+  right: 570px;
+  bottom: 0;
+}
