@@ -28,7 +28,7 @@
 
 
     <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
 
     <!-- css -->
     <link rel="stylesheet" href="css/layout.css" />
@@ -109,7 +109,6 @@
                   />
                   <button type="submit" name="button" class="btn">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                  <span class="hidden">검색</span></button>
                 </form>
               </div>
               <!-- //.h-top-searchbar -->
@@ -738,420 +737,430 @@
               </div>
               <!-- //.h-nav-menu -->
               <div class="h-nav-btn fr">
-                <span class="sr_only">사이트맵 열기</span>
-                <div class="btn"></div>
+                <div class="btn">
+                  <input type="checkbox" class="open-checkbox" id="open-toggle"/>
+                  <label for="open-toggle" class="open-button">
+                    <i class="fa-solid fa-bars"></i>
+                  </label>
+                  <div id="menu-open">
+                    <div class="menu-open-area">
+                      <div class="map-nav inner">
+                        <h2 class="tit fl"><span>SITEMAP</span></h2>
+                        <nav>
+                          <ul class="open-manu-all">
+                            <li class="lnb1 open01">
+                              <a href="./project1_form.html" target="_blank" class="depth1">정보공개</a>
+                              <div class="open-menu">
+                                <ul>
+                                  <li>
+                                    <a href="#" class="depth2">정보공개제도</a>
+                                    <div>
+                                      <ul class="sub01 lnb-detail">
+                                        <li class="sub01-1-1">
+                                          <a href="#">정보공개제도 안내</a>
+                                        </li>
+                                        <li class="sub01-1-2">
+                                          <a href="#">정보공개청구</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">사전정보공표</a>
+                                    <div>
+                                      <ul class="sub02 lnb-detail">
+                                        <li class="sub01-2-1">
+                                          <a href="#">연구사업분야</a>
+                                        </li>
+                                        <li class="sub01-2-2">
+                                          <a href="#">행정지원분야</a>
+                                        </li>
+                                        <li class="sub01-2-3">
+                                          <a href="#">즐겨찾기 정보</a>
+                                        </li>
+                                        <li class="sub01-2-4">
+                                          <a href="#">사전정보Q&A</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">공공데이터 개방</a>
+                                    <div>
+                                      <ul class="sub01 lnb-detail">
+                                        <li class="sub01-3-1">
+                                          <a href="#">공공데이터 개방안내</a>
+                                        </li>
+                                        <li class="sub01-3-2">
+                                          <a href="#">공공데이터 제공목록</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">청렴정보공개</a>
+                                    <div>
+                                      <ul class="sub01 lnb-detail">
+                                        <li class="sub01-4-1">
+                                          <a href="#">감사 사례 및 결과</a>
+                                        </li>
+                                        <li class="sub01-4-2">
+                                          <a href="#">반부패·청렴</a>
+                                        </li>
+                                        <li class="sub01-4-3">
+                                          <a href="#">부패행위 현황 공개</a>
+                                        </li>
+                                        <li class="sub01-4-4">
+                                          <a href="#">내부규정</a>
+                                        </li>
+                                        <li class="sub01-4-5">
+                                          <a href="#">업무추진비현황</a>
+                                        </li>
+                                        <li class="sub01-4-6">
+                                          <a href="#">수의계약현황</a>
+                                        </li>
+                                        <li class="sub01-4-7">
+                                          <a href="#">친인척 채용현황</a>
+                                        </li>
+                                        <li class="sub01-4-8">
+                                          <a href="#">공용차량 운영현황</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">경영공시</a>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">사업실명제</a>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">시설자원개방</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li class="lnb1 open02">
+                              <a href="#" class="depth1">홍보관</a>
+                              <div class="open-menu">
+                                <ul>
+                                  <li>
+                                    <a href="#" class="depth2">홍보자료실</a>
+                                    <div>
+                                      <ul class="sub02 lnb-detail">
+                                        <li class="sub02-1-1">
+                                          <a href="#">CI소개</a>
+                                        </li>
+                                        <li class="sub02-1-2">
+                                          <a href="#">브로슈어</a>
+                                        </li>
+                                        <li class="sub02-1-3">
+                                          <a href="#">보도자료</a>
+                                        </li>
+                                        <li class="sub02-1-4">
+                                          <a href="#">언론기사</a>
+                                        </li>
+                                        <li class="sub02-1-5">
+                                          <a href="#">홍보영상</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">포럼 및 행사</a>
+                                    <div>
+                                      <ul class="sub02 lnb-detail">
+                                        <li class="sub02-2-1">
+                                          <a href="#">최신동정</a>
+                                        </li>
+                                        <li class="sub02-2-2">
+                                          <a href="#">KISTEP 수요포럼</a>
+                                        </li>
+                                        <li class="sub02-2-3">
+                                          <a href="#">R&D 부처합동 설명회</a>
+                                        </li>
+                                        <li class="sub02-2-4">
+                                          <a href="#">주관 행사</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">KISTEP 간행물</a>
+                                    <div>
+                                      <ul class="sub02 lnb-detail">
+                                        <li class="sub02-3-1">
+                                          <a href="#">전체간행물</a>
+                                        </li>
+                                        <li class="sub02-3-2">
+                                          <a href="#">뉴스레터</a>
+                                        </li>
+                                        <li class="sub02-3-3">
+                                          <a href="#">연차보고서</a>
+                                        </li>
+                                        <li class="sub02-3-4">
+                                          <a href="#">KISTEP lnl</a>
+                                        </li>
+                                        <li class="sub02-3-5">
+                                          <a href="#">Asian Research Policy</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li class="lnb1 open03">
+                              <a href="#" class="depth1">주요 사업</a>
+                              <div class="open-menu">
+                                <ul>
+                                  <li>
+                                    <a href="#" class="depth2">주요역할</a>
+                                    <div>
+                                      <ul class="sub03 lnb-detail">
+                                        <li class="sub03-1-1">
+                                          <a href="#">4대 주요 임무</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">연구보고서</a>
+                                    <div>
+                                      <ul class="sub03 lnb-detail">
+                                        <li class="sub03-2-1">
+                                          <a href="#">미래예측</a>
+                                        </li>
+                                        <li class="sub03-2-2">
+                                          <a href="#">정책기획</a>
+                                        </li>
+                                        <li class="sub03-2-3">
+                                          <a href="#">사업조정</a>
+                                        </li>
+                                        <li class="sub03-2-4">
+                                          <a href="#">성과확산</a>
+                                        </li>
+                                        <li class="sub03-2-5">
+                                          <a href="#">조사·평가</a>
+                                        </li>
+                                        <li class="sub03-2-6">
+                                          <a href="#">예비타당성</a>
+                                        </li>
+                                        <li class="sub03-2-7">
+                                          <a href="#">기타연구자료</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">KISTEP 브리프</a>
+                                    <div>
+                                      <ul class="sub03 lnb-detail">
+                                        <li class="sub03-3-1">
+                                          <a href="#">전체브리프</a>
+                                        </li>
+                                        <li class="sub03-3-2">
+                                          <a href="#">이슈페이퍼</a>
+                                        </li>
+                                        <li class="sub03-3-3">
+                                          <a href="#">정책브리프</a>
+                                        </li>
+                                        <li class="sub03-3-4">
+                                          <a href="#">통계브리프</a>
+                                        </li>
+                                        <li class="sub03-3-5">
+                                          <a href="#">기술동향브리프</a>
+                                        </li>
+                                        <li class="sub03-3-6">
+                                          <a href="#">사과플러스</a>
+                                        </li>
+                                        <li class="sub03-3-7">
+                                          <a href="#">미래예측브리프</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li class="lnb1 open04">
+                              <a href="project1_form.html" class="depth1">알림·소식</a>
+                              <div class="open-menu">
+                                <ul>
+                                  <li>
+                                    <a href="project1_form.html" class="depth2"
+                                      >공지사항</a
+                                    >
+                                  </li>
+                                  <li><a href="#" class="depth2">입찰공고</a></li>
+                                  <li><a href="#" class="depth2">연구과제공모</a></li>
+                                  <li>
+                                    <a href="#" class="depth2">채용정보</a>
+                                    <div>
+                                      <ul class="sub04 lnb-detail">
+                                        <li class="sub04-4-1">
+                                          <a href="#">채용안내</a>
+                                        </li>
+                                        <li class="sub04-4-2">
+                                          <a href="#">채용공고</a>
+                                        </li>
+                                        <li class="sub04-4-3">
+                                          <a href="#">제증명발급안내</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li class="lnb1 open05">
+                              <a href="#" class="depth1">국민참여</a>
+                              <div class="open-menu">
+                                <ul>
+                                  <li>
+                                    <a href="#" class="depth2">고객헌장</a>
+                                    <div>
+                                      <ul class="sub05 lnb-detail">
+                                        <li class="sub05-1-1">
+                                          <a href="#">고객헌장 전문</a>
+                                        </li>
+                                        <li class="sub05-1-2">
+                                          <a href="#">핵심 서비스 이행 표준</a>
+                                        </li>
+                                        <li class="sub05-1-3">
+                                          <a href="#">고객 서비스 이행 표준</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">인쇄물출입업체등록</a>
+                                    <div>
+                                      <ul class="sub05 lnb-detail">
+                                        <li class="sub05-2-1">
+                                          <a href="#">인쇄물출입업체 등록안내</a>
+                                        </li>
+                                        <li class="sub05-2-2">
+                                          <a href="#">인쇄물출입업체 계약현황</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">신고센터</a>
+                                    <div>
+                                      <ul class="sub05 lnb-detail">
+                                        <li class="sub05-3-1">
+                                          <a href="#">부조리 신고</a>
+                                        </li>
+                                        <li class="sub05-3-2">
+                                          <a href="#">예산낭비 신고</a>
+                                        </li>
+                                        <li class="sub05-3-3">
+                                          <a href="#">공익·복지부정 신고</a>
+                                        </li>
+                                        <li class="sub05-3-4">
+                                          <a href="#">홈페이지 불편사항</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">자주묻는질문(FAQ)</a>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">묻고답하기</a>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">추천사이트</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li class="lnb1 open06">
+                              <a href="#" class="depth1">기관소개</a>
+                              <div class="open-menu">
+                                <ul>
+                                  <li>
+                                    <a href="#" class="depth2">원장 소개</a>
+                                    <div>
+                                      <ul class="sub06 lnb-detail">
+                                        <li class="sub06-1-1">
+                                          <a href="#">원장인사말</a>
+                                        </li>
+                                        <li class="sub06-1-2">
+                                          <a href="#">역대원장</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">미래비전</a>
+                                    <div>
+                                      <ul class="sub06 lnb-detail">
+                                        <li class="sub06-2-1">
+                                          <a href="#">미션 및 추진전략</a>
+                                        </li>
+                                        <li class="sub06-2-2">
+                                          <a href="#">R&R 2.0</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">연혁</a>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">조직 및 직원</a>
+                                    <div>
+                                      <ul class="sub06 lnb-detail">
+                                        <li class="sub06-4-1">
+                                          <a href="#">조직도</a>
+                                        </li>
+                                        <li class="sub06-4-2">
+                                          <a href="#">직원검색</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">협력기관</a>
+                                    <div>
+                                      <ul class="sub06 lnb-detail">
+                                        <li class="sub06-5-1">
+                                          <a href="#">국내 협력기관</a>
+                                        </li>
+                                        <li class="sub06-5-2">
+                                          <a href="#">국외 협력기관</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="depth2">찾아오시는길</a>
+                                    <div>
+                                      <ul class="sub06 lnb-detail">
+                                        <li class="sub06-6-1">
+                                          <a href="#">사전 방문 등록</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                  <input type="checkbox" class="close-checkbox" id="close-toggle"/>
+                  <label for="close-toggle" class="close-button">
+                    <i class="fa-solid fa-xmark"></i>
+                  </label>
+                </div>
               </div>
               <!-- //.h-nav-btn -->
-            </div>
-            <div id="menu-open">
-              <div class="map-nav inner">
-                <h2 class="tit fl"><span>SITEMAP</span></h2>
-                <nav>
-                  <ul class="open-manu-all">
-                    <li class="lnb1 open01">
-                      <a href="./project1_form.html" target="_blank" class="depth1">정보공개</a>
-                      <div class="open-menu">
-                        <ul>
-                          <li>
-                            <a href="#" class="depth2">정보공개제도</a>
-                            <div>
-                              <ul class="sub01 lnb-detail">
-                                <li class="sub01-1-1">
-                                  <a href="#">정보공개제도 안내</a>
-                                </li>
-                                <li class="sub01-1-2">
-                                  <a href="#">정보공개청구</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">사전정보공표</a>
-                            <div>
-                              <ul class="sub02 lnb-detail">
-                                <li class="sub01-2-1">
-                                  <a href="#">연구사업분야</a>
-                                </li>
-                                <li class="sub01-2-2">
-                                  <a href="#">행정지원분야</a>
-                                </li>
-                                <li class="sub01-2-3">
-                                  <a href="#">즐겨찾기 정보</a>
-                                </li>
-                                <li class="sub01-2-4">
-                                  <a href="#">사전정보Q&A</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">공공데이터 개방</a>
-                            <div>
-                              <ul class="sub01 lnb-detail">
-                                <li class="sub01-3-1">
-                                  <a href="#">공공데이터 개방안내</a>
-                                </li>
-                                <li class="sub01-3-2">
-                                  <a href="#">공공데이터 제공목록</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">청렴정보공개</a>
-                            <div>
-                              <ul class="sub01 lnb-detail">
-                                <li class="sub01-4-1">
-                                  <a href="#">감사 사례 및 결과</a>
-                                </li>
-                                <li class="sub01-4-2">
-                                  <a href="#">반부패·청렴</a>
-                                </li>
-                                <li class="sub01-4-3">
-                                  <a href="#">부패행위 현황 공개</a>
-                                </li>
-                                <li class="sub01-4-4">
-                                  <a href="#">내부규정</a>
-                                </li>
-                                <li class="sub01-4-5">
-                                  <a href="#">업무추진비현황</a>
-                                </li>
-                                <li class="sub01-4-6">
-                                  <a href="#">수의계약현황</a>
-                                </li>
-                                <li class="sub01-4-7">
-                                  <a href="#">친인척 채용현황</a>
-                                </li>
-                                <li class="sub01-4-8">
-                                  <a href="#">공용차량 운영현황</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">경영공시</a>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">사업실명제</a>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">시설자원개방</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="lnb1 open02">
-                      <a href="#" class="depth1">홍보관</a>
-                      <div class="open-menu">
-                        <ul>
-                          <li>
-                            <a href="#" class="depth2">홍보자료실</a>
-                            <div>
-                              <ul class="sub02 lnb-detail">
-                                <li class="sub02-1-1">
-                                  <a href="#">CI소개</a>
-                                </li>
-                                <li class="sub02-1-2">
-                                  <a href="#">브로슈어</a>
-                                </li>
-                                <li class="sub02-1-3">
-                                  <a href="#">보도자료</a>
-                                </li>
-                                <li class="sub02-1-4">
-                                  <a href="#">언론기사</a>
-                                </li>
-                                <li class="sub02-1-5">
-                                  <a href="#">홍보영상</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">포럼 및 행사</a>
-                            <div>
-                              <ul class="sub02 lnb-detail">
-                                <li class="sub02-2-1">
-                                  <a href="#">최신동정</a>
-                                </li>
-                                <li class="sub02-2-2">
-                                  <a href="#">KISTEP 수요포럼</a>
-                                </li>
-                                <li class="sub02-2-3">
-                                  <a href="#">R&D 부처합동 설명회</a>
-                                </li>
-                                <li class="sub02-2-4">
-                                  <a href="#">주관 행사</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">KISTEP 간행물</a>
-                            <div>
-                              <ul class="sub02 lnb-detail">
-                                <li class="sub02-3-1">
-                                  <a href="#">전체간행물</a>
-                                </li>
-                                <li class="sub02-3-2">
-                                  <a href="#">뉴스레터</a>
-                                </li>
-                                <li class="sub02-3-3">
-                                  <a href="#">연차보고서</a>
-                                </li>
-                                <li class="sub02-3-4">
-                                  <a href="#">KISTEP lnl</a>
-                                </li>
-                                <li class="sub02-3-5">
-                                  <a href="#">Asian Research Policy</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="lnb1 open03">
-                      <a href="#" class="depth1">주요 사업</a>
-                      <div class="open-menu">
-                        <ul>
-                          <li>
-                            <a href="#" class="depth2">주요역할</a>
-                            <div>
-                              <ul class="sub03 lnb-detail">
-                                <li class="sub03-1-1">
-                                  <a href="#">4대 주요 임무</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">연구보고서</a>
-                            <div>
-                              <ul class="sub03 lnb-detail">
-                                <li class="sub03-2-1">
-                                  <a href="#">미래예측</a>
-                                </li>
-                                <li class="sub03-2-2">
-                                  <a href="#">정책기획</a>
-                                </li>
-                                <li class="sub03-2-3">
-                                  <a href="#">사업조정</a>
-                                </li>
-                                <li class="sub03-2-4">
-                                  <a href="#">성과확산</a>
-                                </li>
-                                <li class="sub03-2-5">
-                                  <a href="#">조사·평가</a>
-                                </li>
-                                <li class="sub03-2-6">
-                                  <a href="#">예비타당성</a>
-                                </li>
-                                <li class="sub03-2-7">
-                                  <a href="#">기타연구자료</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">KISTEP 브리프</a>
-                            <div>
-                              <ul class="sub03 lnb-detail">
-                                <li class="sub03-3-1">
-                                  <a href="#">전체브리프</a>
-                                </li>
-                                <li class="sub03-3-2">
-                                  <a href="#">이슈페이퍼</a>
-                                </li>
-                                <li class="sub03-3-3">
-                                  <a href="#">정책브리프</a>
-                                </li>
-                                <li class="sub03-3-4">
-                                  <a href="#">통계브리프</a>
-                                </li>
-                                <li class="sub03-3-5">
-                                  <a href="#">기술동향브리프</a>
-                                </li>
-                                <li class="sub03-3-6">
-                                  <a href="#">사과플러스</a>
-                                </li>
-                                <li class="sub03-3-7">
-                                  <a href="#">미래예측브리프</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="lnb1 open04">
-                      <a href="project1_form.html" class="depth1">알림·소식</a>
-                      <div class="open-menu">
-                        <ul>
-                          <li>
-                            <a href="project1_form.html" class="depth2"
-                              >공지사항</a
-                            >
-                          </li>
-                          <li><a href="#" class="depth2">입찰공고</a></li>
-                          <li><a href="#" class="depth2">연구과제공모</a></li>
-                          <li>
-                            <a href="#" class="depth2">채용정보</a>
-                            <div>
-                              <ul class="sub04 lnb-detail">
-                                <li class="sub04-4-1">
-                                  <a href="#">채용안내</a>
-                                </li>
-                                <li class="sub04-4-2">
-                                  <a href="#">채용공고</a>
-                                </li>
-                                <li class="sub04-4-3">
-                                  <a href="#">제증명발급안내</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="lnb1 open05">
-                      <a href="#" class="depth1">국민참여</a>
-                      <div class="open-menu">
-                        <ul>
-                          <li>
-                            <a href="#" class="depth2">고객헌장</a>
-                            <div>
-                              <ul class="sub05 lnb-detail">
-                                <li class="sub05-1-1">
-                                  <a href="#">고객헌장 전문</a>
-                                </li>
-                                <li class="sub05-1-2">
-                                  <a href="#">핵심 서비스 이행 표준</a>
-                                </li>
-                                <li class="sub05-1-3">
-                                  <a href="#">고객 서비스 이행 표준</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">인쇄물출입업체등록</a>
-                            <div>
-                              <ul class="sub05 lnb-detail">
-                                <li class="sub05-2-1">
-                                  <a href="#">인쇄물출입업체 등록안내</a>
-                                </li>
-                                <li class="sub05-2-2">
-                                  <a href="#">인쇄물출입업체 계약현황</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">신고센터</a>
-                            <div>
-                              <ul class="sub05 lnb-detail">
-                                <li class="sub05-3-1">
-                                  <a href="#">부조리 신고</a>
-                                </li>
-                                <li class="sub05-3-2">
-                                  <a href="#">예산낭비 신고</a>
-                                </li>
-                                <li class="sub05-3-3">
-                                  <a href="#">공익·복지부정 신고</a>
-                                </li>
-                                <li class="sub05-3-4">
-                                  <a href="#">홈페이지 불편사항</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">자주묻는질문(FAQ)</a>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">묻고답하기</a>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">추천사이트</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="lnb1 open06">
-                      <a href="#" class="depth1">기관소개</a>
-                      <div class="open-menu">
-                        <ul>
-                          <li>
-                            <a href="#" class="depth2">원장 소개</a>
-                            <div>
-                              <ul class="sub06 lnb-detail">
-                                <li class="sub06-1-1">
-                                  <a href="#">원장인사말</a>
-                                </li>
-                                <li class="sub06-1-2">
-                                  <a href="#">역대원장</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">미래비전</a>
-                            <div>
-                              <ul class="sub06 lnb-detail">
-                                <li class="sub06-2-1">
-                                  <a href="#">미션 및 추진전략</a>
-                                </li>
-                                <li class="sub06-2-2">
-                                  <a href="#">R&R 2.0</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">연혁</a>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">조직 및 직원</a>
-                            <div>
-                              <ul class="sub06 lnb-detail">
-                                <li class="sub06-4-1">
-                                  <a href="#">조직도</a>
-                                </li>
-                                <li class="sub06-4-2">
-                                  <a href="#">직원검색</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">협력기관</a>
-                            <div>
-                              <ul class="sub06 lnb-detail">
-                                <li class="sub06-5-1">
-                                  <a href="#">국내 협력기관</a>
-                                </li>
-                                <li class="sub06-5-2">
-                                  <a href="#">국외 협력기관</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                          <li>
-                            <a href="#" class="depth2">찾아오시는길</a>
-                            <div>
-                              <ul class="sub06 lnb-detail">
-                                <li class="sub06-6-1">
-                                  <a href="#">사전 방문 등록</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
             </div>
             <!-- //#menu-open -->
           </div>

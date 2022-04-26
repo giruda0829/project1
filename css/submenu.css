@@ -145,30 +145,100 @@
 }
 
 /* menu-open */
-#menu-open {
+
+#h-nav .h-nav-btn input {
   display: none;
 }
 
-/* #menu-open{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80%;
-    background-color: #fff;
-    text-align: left;
-    transition: all .2s;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-    z-index: 100;
+#h-nav .h-nav-btn {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 20px;
 }
-#h-nav .h-nav-btn input:checked #h-nav #menu-open{
-    height: 85%;
-    max-height: 100%;
-    opacity: 1;
-    visibility: visible;
-    z-index: 100;
+
+#h-nav .btn {
+  width: 100%;
+  height: 50px;
+  z-index: 100;
+}
+#h-nav .open-button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#h-nav .fa-bars {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  font-size: 25px;
+  line-height: 50px;
+  text-align: center;
+}
+
+#h-nav .close-button {
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  position: absolute;
+  top: -30px;
+  z-index: 999;
+  transition: all .3s;
+}
+#h-nav .fa-xmark {
+  width: 50px;
+  height: 50px;
+  color: #333;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+}
+
+#menu-open{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all .3s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+}
+#h-nav .h-nav-btn .open-checkbox:checked:root{
+  overflow-y: hidden;
+}
+#h-nav .h-nav-btn .open-checkbox:checked ~ .close-button,
+#h-nav .h-nav-btn .open-checkbox:checked ~ #menu-open{
+  opacity: 1;
+  visibility: visible;
+}
+#h-nav .close-checkbox:checked ~ .close-button,
+#h-nav .close-checkbox:checked ~ #menu-open{
+  opacity: 0;
+  visibility: hidden;
+}
+#h-nav .h-nav-btn .open-checkbox:checked ~ #menu-open nav{
+  overflow-y: scroll;
+}
+#menu-open .menu-open-area{
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  background-color: #fff;
+  text-align: left;
+  overflow: hidden;
 }
 #menu-open .tit{
     width: 180px;
@@ -179,30 +249,30 @@
     font-weight: 700;
     line-height: 1.2;
     font-family: Montserrat;
-    background: url(https://www.kistep.re.kr/main/img/layout/allmenu_bg.png) no-repeat 0 0;
+    background: url(../img/allmenu_bg.png) no-repeat 0 0;
 }
-/* https://www.kistep.re.kr/main/img/layout/allmenu_bg.png */
-/* #menu-open .tit>span{
+
+#menu-open .tit>span{
     display: block;
     transform: rotate(90deg);
 }
-#menu-open>nav{
+#menu-open nav{
     width: calc(100% - 180px);
-    height: calc(100% - 70px);
-    margin-top: 70px;
-    overflow: auto;
+    margin-top: 100px;
     display: block;
+    overflow: hidden;
 }
+
 #menu-open .open-manu-all{
     display: flex;
     height: 100%;
+    overflow-y: auto;
 }
 #menu-open .open-manu-all [class*="open0"]{
     width: 200px;
     padding: 0 20px;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
-    overflow: hidden;
 }
 #menu-open .open-manu-all [class*="open0"]>.depth1{
     position: relative;
@@ -230,4 +300,4 @@
 }
 #menu-open a:hover{
     text-decoration: underline;
-} */
+}
