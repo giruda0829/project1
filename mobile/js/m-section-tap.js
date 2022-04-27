@@ -22,6 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
   /* m-section3 */
   const tabContent2 = document.querySelectorAll(".publication-area>div");
   const targetLink2 = document.querySelectorAll(".publication-area>.tab-tit>a");
+  const tabContent21 = document.querySelectorAll(".tab-content>div");
+  const targetLink21 = document.querySelectorAll(".tab-content>nav a");
+  const navAll1 = document.querySelector("#publication1 a.all");
+  const navAll2 = document.querySelector("#publication2 a.all");
+  const navAll3 = document.querySelector("#publication3 a.all");
 
   for (let k = 0; k < targetLink2.length; k++) {
     targetLink2[k].addEventListener("click", (e) => {
@@ -31,6 +36,18 @@ document.addEventListener("DOMContentLoaded", () => {
         e.target.classList.add("active");
       }
       let view = e.target.getAttribute("href");
+
+      if (view === "#publication1") {
+        document.querySelector("#publication1-1").style.display = "block";
+        navAll1.classList.add("active");
+      } else if (view === "#publication2") {
+        document.querySelector("#publication2-1").style.display = "block";
+        navAll2.classList.add("active");
+      } else if (view === "#publication3") {
+        document.querySelector("#publication3-1").style.display = "block";
+        navAll3.classList.add("active");
+      }
+
       for (let y = 0; y < tabContent2.length; y++) {
         tabContent2[y].style.display = "none";
       }
@@ -38,9 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     document.querySelector("#publication1").style.display = "block";
   }
-
-  const tabContent21 = document.querySelectorAll(".tab-content>div");
-  const targetLink21 = document.querySelectorAll(".tab-content>nav a");
 
   for (let k = 0; k < targetLink21.length; k++) {
     targetLink21[k].addEventListener("click", (e) => {

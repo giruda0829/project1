@@ -54,11 +54,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
 
     <!-- jq -->
-    <script src="jq/submenu.js"></script>
+    <script src="jq/jq.js"></script>
     <script src="jq/slide_bx.js"></script>
     <script src="jq/slide-script.js"></script>
     <script src="jq/topbtn.js"></script>
-    <script src="jq/footer-menu.js"></script>
 
     <!-- js -->
     <script src="js/m-section-tap.js"></script>
@@ -736,17 +735,17 @@
                 </ul>
               </div>
               <!-- //.h-nav-menu -->
+              <!-- 질문1 +submenu.css -->
               <div class="h-nav-btn fr">
                 <div class="btn">
-                  <input type="checkbox" class="open-checkbox" id="open-toggle"/>
-                  <label for="open-toggle" class="open-button">
+                  <div class="open-button">
                     <i class="fa-solid fa-bars"></i>
-                  </label>
+                  </div>
                   <div id="menu-open">
                     <div class="menu-open-area">
                       <div class="map-nav inner">
                         <h2 class="tit fl"><span>SITEMAP</span></h2>
-                        <nav>
+                        <div class="nav">
                           <ul class="open-manu-all">
                             <li class="lnb1 open01">
                               <a href="./project1_form.html" target="_blank" class="depth1">정보공개</a>
@@ -1150,14 +1149,13 @@
                               </div>
                             </li>
                           </ul>
-                        </nav>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <input type="checkbox" class="close-checkbox" id="close-toggle"/>
-                  <label for="close-toggle" class="close-button">
+                  <div class="close-button">
                     <i class="fa-solid fa-xmark"></i>
-                  </label>
+                  </div>
                 </div>
               </div>
               <!-- //.h-nav-btn -->
@@ -1273,6 +1271,7 @@
         <!-- //#h-banner -->
       </header>
       <!-- //#header -->
+
       <div id="main">
         <div id="m-section1">
           <div class="inner">
@@ -3118,41 +3117,43 @@
         </div>
       </div>
       <div id="footer">
-        <div class="inner pr">
+        <div class="inner site pr">
           <div class="site-list fr">
-            <p>
+            <div class="btn on">
               관련사이트 바로가기
               <i class="fa-solid fa-caret-up"></i>
-            </p>
+            </div>
             <div class="list-up">
               <ul class="list">
                 <li>
-                  <a href="project1_form.html">과학기술정책지원서비스</a>
+                  <a href="project1_form.html" target="blank">과학기술정책지원서비스</a>
                 </li>
                 <li>
-                  <a href="project1_form.html">글로벌과학기술정책정보</a>
+                  <a href="project1_form.html" target="blank">글로벌과학기술정책정보</a>
                 </li>
                 <li>
-                  <a href="project1_form.html">과학기술이재정책플랫폼</a>
+                  <a href="project1_form.html" target="blank">과학기술이재정책플랫폼</a>
                 </li>
                 <li>
-                  <a href="project1_form.html">국가과학기술지식정보서비스</a>
+                  <a href="project1_form.html" target="blank">국가과학기술지식정보서비스</a>
                 </li>
                 <li>
-                  <a href="project1_form.html">R&D예타로</a>
+                  <a href="project1_form.html" target="blank">R&D예타로</a>
                 </li>
                 <li>
-                  <a href="project1_form.html">사회문제해결플랫폼</a>
+                  <a href="project1_form.html" target="blank">사회문제해결플랫폼</a>
                 </li>
                 <li>
-                  <a href="project1_form.html">범부처통합연구지원시스템</a>
+                  <a href="project1_form.html" target="blank">범부처통합연구지원시스템</a>
                 </li>
                 <li>
-                  <a href="project1_form.html">Asian Research Policy</a>
+                  <a href="project1_form.html" target="blank">Asian Research Policy</a>
                 </li>
               </ul>
             </div>
           </div>
+        </div>
+        <div class="inner pr">
           <div class="footer-nav">
             <div class="nav">
               <ul class="fnb">
@@ -3179,12 +3180,12 @@
               </ul>
             </div>
             <div class="footer-info cf">
-              <address>충청북도 음성군 맹동면 원중로 1339</address>
+              <address>과학기술도 음성군 한국면 평가로 1234</address>
               <span>
                 대표전화 :
-                <a href="tel:010-561-0810">049-561-0810</a>
+                <a href="tel:010-123-1234">041-555-7777</a>
               </span>
-              <span>FAX : 049-561-0810</span>
+              <span>FAX : 041-555-7777</span>
               <p class="copyright">
                 Copyright 2020 © 한국과학기술기획평가원(KISTEP) All Rights
                 Reserved.

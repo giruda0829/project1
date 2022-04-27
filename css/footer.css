@@ -101,33 +101,20 @@
 }
 
 
-#footer>.inner.active{
-  height: 400px;
-  bottom: 310px;
-}
-#footer>.inner.active .footer-nav{
-  position: absolute;
-  bottom: 0;
-}
-#footer>.inner.active .mark{
-  right: 160px;
-}
-#footer>.inner.active .site-list>p{
-  background: #fff;
-  color: #222;
-  border: none;
+#footer .inner.site{
+  overflow: visible;
 }
 #footer .site-list {
   width: 250px;
   height: 300px;
-  z-index: 1;
+  z-index: 100;
   box-sizing: border-box;
   transition: all .2s;
-  bottom: 44px;
   position: absolute;
+  bottom: -30px;
   right: 0;
 }
-#footer .site-list p {
+#footer .site-list .btn {
   display: block;
   position: absolute;
   width: 250px;
@@ -139,15 +126,17 @@
   right: 0;
   float: left;
 }
-#footer .site-list p:hover {
+#footer .site-list .btn:hover {
   text-decoration: underline;
 }
 #footer .list-up{
+  display: none;
   position: absolute;
   width: 250px;
   height: 312.5px;
   bottom: 45px;
   right: 0;
+  transition: all .5s;
 }
 #footer .list-up .list{
   width: 250px;
@@ -164,6 +153,14 @@
   text-decoration: underline;
 }
 
+#footer .site-list .btn.on{
+  color: #333;
+  background-color: #fff;
+}
+#footer .site-list .btn.on ~ .list-up{
+  display: block;
+}
+
 #footer .footer-info{
   padding-top: 20px;
 }
@@ -176,4 +173,7 @@
   position: absolute;
   right: 570px;
   bottom: 0;
+}
+#footer .validator {
+  margin-top: 15px;
 }

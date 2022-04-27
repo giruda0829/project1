@@ -145,89 +145,141 @@
 }
 
 /* menu-open */
-#menu-open {
-  display: none;
+#h-nav .h-nav-btn {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 10px;
 }
 
-/* #menu-open{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80%;
-    background-color: #fff;
-    text-align: left;
-    transition: all .2s;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-    z-index: 100;
+#h-nav .btn {
+  width: 100%;
+  height: 50px;
+  z-index: 100;
 }
-#h-nav .h-nav-btn input:checked #h-nav #menu-open{
-    height: 85%;
-    max-height: 100%;
-    opacity: 1;
-    visibility: visible;
-    z-index: 100;
+
+#h-nav .open-button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-#menu-open .tit{
-    width: 180px;
-    padding-top:290px;
-    padding-bottom: 100%;
-    color: #fff;
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 1.2;
-    font-family: Montserrat;
-    background: url(https://www.kistep.re.kr/main/img/layout/allmenu_bg.png) no-repeat 0 0;
+
+#h-nav .fa-bars {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  font-size: 25px;
+  line-height: 50px;
+  text-align: center;
 }
-/* https://www.kistep.re.kr/main/img/layout/allmenu_bg.png */
-/* #menu-open .tit>span{
-    display: block;
-    transform: rotate(90deg);
+
+#h-nav .close-button {
+  display: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  position: absolute;
+  top: -10px;
+  z-index: 999;
+  transition: all .3s;
 }
-#menu-open>nav{
-    width: calc(100% - 180px);
-    height: calc(100% - 70px);
-    margin-top: 70px;
-    overflow: auto;
-    display: block;
+
+#h-nav .fa-xmark {
+  width: 50px;
+  height: 50px;
+  color: #333;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
 }
-#menu-open .open-manu-all{
-    display: flex;
-    height: 100%;
+
+#menu-open {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: all .3s;
+  z-index: 100;
 }
-#menu-open .open-manu-all [class*="open0"]{
-    width: 200px;
-    padding: 0 20px;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    overflow: hidden;
+
+#menu-open .menu-open-area {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  background-color: #fff;
+  text-align: left;
+  overflow: hidden;
 }
-#menu-open .open-manu-all [class*="open0"]>.depth1{
-    position: relative;
-    display: block;
-    margin-bottom: 25px;
-    color: #222222;
-    line-height: 1.2;
-    font-size: 24px;
-    font-weight: 700;
+
+#menu-open .nav {
+  width: 100%;
+  margin-top: 100px;
+  display: block;
 }
-#menu-open .open-manu-all .open-menu>ul>li{
-    margin-bottom: 10px;
+
+#menu-open .open-manu-all {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  overflow-y: auto;
 }
-#menu-open .open-manu-all .open-menu>ul>li>a{
-    color: #555;
-    font-size: 16px;
-    font-weight: 500;
+
+#menu-open .open-manu-all [class*="open0"] {
+  width: 100%;
+  padding: 0 20px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
 }
-#menu-open .open-manu-all .open-menu .lnb-detail a{
-    color: #777;
-    padding-left:15px;
+
+#menu-open .open-manu-all [class*="open0"]>.depth1 {
+  position: relative;
+  display: block;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  color: #222222;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 1px solid #999;
+  cursor: pointer;
 }
-#menu-open .open-manu-all .open-menu .lnb-detail a::before{
-    content: '- ';
+
+#menu-open .open-manu-all .open-menu{
+  height: 0;
+  overflow-y: hidden;
 }
-#menu-open a:hover{
-    text-decoration: underline;
-} */
+#menu-open .open-manu-all .open-menu.on{
+  height: 90vh;
+  overflow-y: auto;
+}
+#menu-open .open-manu-all .open-menu>ul>li {
+  margin-bottom: 10px;
+}
+
+#menu-open .open-manu-all .open-menu>ul>li>a {
+  color: #555;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#menu-open .open-manu-all .open-menu .lnb-detail a {
+  color: #777;
+}
+
+#menu-open .open-manu-all .open-menu .lnb-detail a::before {
+  content: '- ';
+}
+
+#menu-open a:hover {
+  text-decoration: underline;
+}

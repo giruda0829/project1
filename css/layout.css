@@ -79,6 +79,18 @@ textarea {
   width: 100%;
   height: 200px;
 }
+.all_scrollFixed{overflow: hidden;}
+.all_scrollFixed::before {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 1000%;
+    height: 10000%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateX(-50%);
+    content: '';
+    z-index: 95;
+}
 #back-top-btn {
   position: fixed;
   bottom: 11em;

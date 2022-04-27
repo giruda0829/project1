@@ -33,21 +33,38 @@ $(window).ready(function () {
     mode: "fade",
     minSlides: 1,
     moveSlides: 1,
-    auto: false,
-    slideWidth: 450,
+    auto: true,
+    slideWidth: 350,
+    slideHeight: 370,
+    slideMargin:30,
+    pager: false,
     nextText: '<i class="fa-solid fa-chevron-right"></i>',
     prevText: '<i class="fa-solid fa-chevron-left"></i>',
   });
 
-  /* 푸터 사이트 목록 슬라이더 */
-  $("#foot-banner .view .list").bxSlider({
-    mode:'fade',
+  /* 섹션3 슬라이더 */
+  $("#m-section3 .list").bxSlider({
+    mode: "fade",
     minSlides: 1,
     moveSlides: 1,
     auto: true,
-    pause: 3000,
+    slideWidth: 350,
+    slideHeight: 350,
     pager: false,
-    slideWidth: 450,
+    nextText: '<i class="fa-solid fa-chevron-right"></i>',
+    prevText: '<i class="fa-solid fa-chevron-left"></i>',
+  });
+
+
+  /* 푸터 사이트 목록 슬라이더 */
+  $("#foot-banner .view .list").bxSlider({
+    mode:"fade",
+    minSlides: 1,
+    moveSlides: 1,
+    auto: true,
+    pager: false,
+    slideWidth: 350,
+    slideHeight: 350,
     nextText: '<i class="fa-solid fa-chevron-right"></i>',
     prevText: '<i class="fa-solid fa-chevron-left"></i>',
     autoControls:true,

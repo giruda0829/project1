@@ -282,7 +282,6 @@
 #m-section2 {
   margin-top: 50px;
   width: 100%;
-  height: 550px;
   padding: 40px 0;
 }
 #m-section2::after {
@@ -290,12 +289,6 @@
 }
 #m-section2 .forum-event {
   position: relative;
-  overflow: hidden;
-}
-#m-section2 .forum-list li {
-  float: left;
-  width: 80%;
-  margin: 15px 0;
 }
 #m-section2 .forum-event .text-area {
   display: block;
@@ -338,20 +331,27 @@
   font-size: 15px;
   margin-bottom: 17px;
 }
-#m-section2 .forum-list li + li {
-  height: 171px;
-  margin-bottom: 15px;
-}
-#m-section2 .forum-list li:nth-child(2){
-  margin-bottom: -15px;
-}
-#m-section2 .forum-list li:nth-child(n + 2) .image {
+#m-section2 .forum-list li .image {
   position: relative;
   display: block;
   width: 100%;
+  margin-bottom: 20px;
 }
-#m-section2 .forum-list li:nth-child(n + 2) img {
+#m-section2 .forum-list li .image img{
   width: 100%;
+}
+#m-section2 .bx-prev,
+#m-section2 .bx-next{
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#m-section2 .bx-prev{
+  left: 0;
+}
+#m-section2 .bx-next{
+  right: 0;
 }
 
 /* #m-section3 */
