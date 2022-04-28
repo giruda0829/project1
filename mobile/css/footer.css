@@ -102,22 +102,6 @@
 }
 
 
-#footer>.inner.active{
-  height: 400px;
-  bottom: 310px;
-}
-#footer>.inner.active .footer-nav{
-  position: absolute;
-  bottom: 0;
-}
-#footer>.inner.active .mark{
-  right: 160px;
-}
-#footer>.inner.active .site-list>p{
-  background: #fff;
-  color: #222;
-  border: none;
-}
 #footer .site-list {
   width: 250px;
   height: 300px;
@@ -177,4 +161,7 @@
   position: absolute;
   right: 570px;
   bottom: 0;
+}
+#footer .validator {
+  margin-top: 15px;
 }
