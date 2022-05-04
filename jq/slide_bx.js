@@ -1,10 +1,5 @@
 $(window).ready(function () {
-  var mainwrap = $("#m-section1"),
-    stopBtn = mainwrap.find(".controls-auto>.slide-stop"),
-    startBtn = mainwrap.find(".controls-auto>.slide-start");
-  var counter = $(".counter"),
-    slider = mainwrap.find(".m-c1-2-slider>li"),
-    num = slider.lenght;
+  
   /* 헤더백그라운드 */
   $("#h-slider .sliders").bxSlider({
     mode: "fade",
